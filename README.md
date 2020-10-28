@@ -20,8 +20,11 @@
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [toolname](link) - Short description
+ >   * C++(link) - This is the language we will be using to implement the project.
+ >   * Spotify API(https://developer.spotify.com/documentation/web-api/) - The Spotify API will be used to gather the data needed to execute the program. It will allow us to get access to personalized playlists and music catered to the user.
  > * What will be the input/output of your project?
+ >   * Input: Music genre and time allotted for program to run.
+ >   * Output: A personalized music playlist.
  > * What are the three design patterns you will be using. For each design pattern you must:
  >   * Explain in 3 - 5 sentences why you picked this pattern and what feature you will implement with it
  >     * Abstract Factory: We would use this design pattern to create our objects. 
