@@ -1,10 +1,10 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\<"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Project title\>
+# \<Spotify Study\>
  > Your author list below should include links to all members GitHub and should begin with a "\<" (remove existing author).
  
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
+ > Authors: \<[Cindy Ho](https://github.com/cho102)\>\<[Denise Chan](https://github.com/denisechan1)\>\<[Euijin (Ruth) Hwang]( https://github.com/ruthhwang)\>
  
  > You will be forming a group of **THREE** students and work on an interesting project that you will propose yourself (in this `README.md` document). You can pick any project that you'd like, but it needs ot implement three design patterns. Each of the members in a group is expected to work on at least one design pattern and its test cases. You can, of course, help each other, but it needs to be clear who will be responsible for which pattern and for which general project features.
  
@@ -19,6 +19,7 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
+    > As students, productivity is always applicable to our daily lives. When discussing project ideas, we discovered two common themes: we all used the Pomodoro technique, and listening to specific music when we study. We wanted to combine the two to create an app that would allow you to set a timer - let's say 25 minutes - and it would give the user a playlist of songs to study that would be exactly the length of the time set to study. 
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  >   * C++(link) - This is the language we will be using to implement the project.
  >   * Spotify API(https://developer.spotify.com/documentation/web-api/) - The Spotify API will be used to gather the data needed to execute the program. It will allow us to get access to personalized playlists and music catered to the user.
