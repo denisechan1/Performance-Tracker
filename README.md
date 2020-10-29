@@ -2,8 +2,6 @@
  > Prompt text is any lines beginning with "\<"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Performance Tracker
- > Your author list below should include links to all members GitHub and should begin with a "\<" (remove existing author).
- 
  > Authors: \<[Cindy Ho](https://github.com/cho102)\>\<[Denise Chan](https://github.com/denisechan1)\>\<[Euijin (Ruth) Hwang]( https://github.com/ruthhwang)\>
  
  > You will be forming a group of **THREE** students and work on an interesting project that you will propose yourself (in this `README.md` document). You can pick any project that you'd like, but it needs ot implement three design patterns. Each of the members in a group is expected to work on at least one design pattern and its test cases. You can, of course, help each other, but it needs to be clear who will be responsible for which pattern and for which general project features.
@@ -23,8 +21,8 @@
  >   * C++ - This is the language we will be using to implement the project.
  >   * Spotify API(https://developer.spotify.com/documentation/web-api/) - The Spotify API will be used to gather the data needed to execute the program. It will allow us to get access to personalized playlists and music catered to the user.
  > * Project IO: 
- >   * Input: Music genre and time allotted for program to run.
- >   * Output: A personalized music playlist.
+ >   * Input: From the user, we will ask them for which category they would like to use the application for such as cramming, cardio, etc as well as how long the user would like to use the application for (timer/tracker).
+ >   * Output: The output would be a music playlist of a specific mood that matches the category the user chose that will play for a duration of time. In between there will be small pauses or breaks that will allow the user to rest or cool down so as to not tire them out. It will also feature a countdown timer that shows how much longer they will need to study.
  > * 3 Design Patterns We Will Be Implementing:
  >   * Abstract Factory: We will use this patten to make playlists based on data from the Spotify Audio Features and Analysis API. This design pattern is one of the best ways to make objects. We will create different object playlists based on genre and moods. However, for all of the playlists, we will be collecting data on the song names and song duration. 
  >   * Composite: We will use this pattern to create a hierarchy of different categories in which we will use the timer for. Each category, like studying and workout, will have its own music that is catered towards its use. Along with this, each category will have its own unique implementation. For example, depending on the studying type, like cramming or long periods of studying for a specific class, there will be a break in between each time that would signal for a short break or to transition to a different class to study. The same goes for workouts and meditation. 
