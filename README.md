@@ -1,7 +1,7 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\<"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \Spotify Study\
+# Spotify Study
  > Your author list below should include links to all members GitHub and should begin with a "\<" (remove existing author).
  
  > Authors: \<[Cindy Ho](https://github.com/cho102)\>\<[Denise Chan](https://github.com/denisechan1)\>\<[Euijin (Ruth) Hwang]( https://github.com/ruthhwang)\>
@@ -19,16 +19,16 @@
 ## Project Description
  > * Many students enjoy listening to music when they study .... (continue)
  > * This project is important to us because as students, productivity is always applicable to our daily lives. When discussing project ideas, we discovered two common themes: we all used the Pomodoro technique, and listening to specific music when we study. We wanted to combine the two to create an app that would allow you to set a timer - let's say 25 minutes - and it would give the user a playlist of songs to study that would be exactly the length of the time set to study. 
- > * Tools that we'll be using: 
- >   * C++(link) - This is the language we will be using to implement the project.
+ > * Tools We Will Be Using: 
+ >   * C++ - This is the language we will be using to implement the project.
  >   * Spotify API(https://developer.spotify.com/documentation/web-api/) - The Spotify API will be used to gather the data needed to execute the program. It will allow us to get access to personalized playlists and music catered to the user.
  > * Project IO: 
  >   * Input: Music genre and time allotted for program to run.
  >   * Output: A personalized music playlist.
  > * 3 Design Patterns We Will Be Implementing:
- >    * Abstract Factory: We would use this design pattern to create our objects. 
- >    * Adapter: We would use this design pattern to create an interface that our users would expect/be able to use easily.
- >    * Iterator: We would use this design pattern to create a clock/countdown timer for the length of time the user wants to play songs for. We would also use > this to list the songs that the user listens to.
+ >   * Abstract Factory: We would use this design pattern to create our objects. 
+ >   * Adapter: We would use this design pattern to create an interface that our users would expect/be able to use easily.
+ >   * Iterator: We would use this design pattern to create a clock/countdown timer for the length of time the user wants to play songs for. We would also use > this to list the songs that the user listens to.
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
