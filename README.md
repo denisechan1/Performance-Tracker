@@ -1,7 +1,7 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\<"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# Spotify Study
+# Performance Tracker
  > Your author list below should include links to all members GitHub and should begin with a "\<" (remove existing author).
  
  > Authors: \<[Cindy Ho](https://github.com/cho102)\>\<[Denise Chan](https://github.com/denisechan1)\>\<[Euijin (Ruth) Hwang]( https://github.com/ruthhwang)\>
@@ -26,9 +26,9 @@
  >   * Input: Music genre and time allotted for program to run.
  >   * Output: A personalized music playlist.
  > * 3 Design Patterns We Will Be Implementing:
- >   * Abstract Factory: We would use this design pattern to create our objects. 
- >   * Adapter: We would use this design pattern to create an interface that our users would expect/be able to use easily.
- >   * Iterator: We would use this design pattern to create a clock/countdown timer for the length of time the user wants to play songs for. We would also use > this to list the songs that the user listens to.
+ >   * Abstract Factory: We will use this patten to make playlists based on data from the Spotify Audio Features and Analysis API. This design pattern is one of the best ways to make objects. We will create different object playlists based on genre and moods. However, for all of the playlists, we will be collecting data on the song names and song duration. 
+ >   * Composite: We will use this pattern to create a hierarchy of different categories in which we will use the timer for. Each category, like studying and workout, will have its own music that is catered towards its use. Along with this, each category will have its own unique implementation. For example, depending on the studying type, like cramming or long periods of studying for a specific class, there will be a break in between each time that would signal for a short break or to transition to a different class to study. The same goes for workouts and meditation. 
+ >   * Iterator: We will use this pattern to output the playlist information and create a countdown timer. The iterator will go thorugh the specific playlist class of the user's genre choice and output the titles of the songs listed in that playlist. Another itertor will keep track of the countdown of the user's workout/study time goals of the week.
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
