@@ -17,8 +17,8 @@
  > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
 
 ## Project Description
- > * Many students enjoy listening to music when they study .... (continue)
- > * This project is important to us because as students, productivity is always applicable to our daily lives. When discussing project ideas, we discovered two common themes: we all used the Pomodoro technique, and listening to specific music when we study. We wanted to combine the two to create an app that would allow you to set a timer - let's say 25 minutes - and it would give the user a playlist of songs to study that would be exactly the length of the time set to study. 
+ > * Many students enjoy listening to music for all activites - sleeping, working out, studying, hanging out with friends. We've found that people have different playlists for different scenarios. We want to provide a way to combine people's love of music with productivity. Our project will take in the amount of time our user wants use for a certain activity, and create a playlist that best fits that activity based on the song's characteristics. This playlist will be the exact time of the 
+ > * This project is important to us because as students, productivity is always applicable to our daily lives. Students struggle with feeling the need to be productive in every minute and aspect of their lives. When discussing project ideas, we discussed a mutual love of music. We wanted to combine our love of music and need that many students feel to be productive in one place. That way students can enjoy their daily lives with the music they enjoy. 
  > * Tools We Will Be Using: 
  >   * C++ - This is the language we will be using to implement the project.
  >   * Spotify API(https://developer.spotify.com/documentation/web-api/) - The Spotify API will be used to gather the data needed to execute the program. It will allow us to get access to personalized playlists and music catered to the user.
