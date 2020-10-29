@@ -19,7 +19,7 @@
  > * This project is important to us because as students, productivity is always applicable to our daily lives. Students struggle with feeling the need to be productive in every minute and aspect of their lives. When discussing project ideas, we discussed a mutual love of music. We wanted to combine our love of music and need that many students feel to be productive in one place. That way students can enjoy their daily lives with the music they enjoy. 
  > * Tools We Will Be Using: 
  >   * C++ - This is the language we will be using to implement the project.
- >   * Spotify API(https://developer.spotify.com/documentation/web-api/) - The Spotify API will be used to gather the data needed to execute the program. It will allow us to get access to personalized playlists and music catered to the user.
+ >   * [Spotify API](https://developer.spotify.com/documentation/web-api/reference/tracks/) - We will be using the Audio Features & Analysis API from 	Spotify to create a playlist that will suit each category in the program. The API will allow us to analyze songs based on the tempo and mood that will better fit each category.
  > * Project IO: 
  >   * Input: From the user, we will ask them for which category they would like to use the application for such as cramming, cardio, etc as well as how long the user would like to use the application for (timer/tracker).
  >   * Output: The output would be a music playlist of a specific mood that matches the category the user chose that will play for a duration of time. In between there will be small pauses or breaks that will allow the user to rest or cool down so as to not tire them out. It will also feature a countdown timer that shows how much longer they will need to study.
