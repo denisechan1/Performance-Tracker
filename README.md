@@ -40,7 +40,9 @@
 ## Class Diagram
  > Include a class diagram(s) for each design pattern and a description of the diagram(s). This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
  
- ![FinalProject Composite Diagram](https://user-images.githubusercontent.com/57569111/99162075-40e75700-26ae-11eb-95d7-19782f0eda34.png)
+![FinalProject Composite Diagram](https://user-images.githubusercontent.com/57569111/99225029-3c996780-279c-11eb-915f-6888b290cf1d.png)
+> The composite class diagram shows the relationship between the component(UserGuide), composite (Category) and the leaf (Tasks). The user can input as many categories and tasks they would like to do, how long they want to spend on the task or each category each day and D-Day, which is when they want to complete the task by. The composite object, Category, can contain several more categories and tasks which are then added into a vector. By getting the hours per day and D-Day, we can calculate how much time should be allocated for each task per day that will best fit the user's schedule. The user is also able to print out a guide that shows what task they should do for each day and how long they should spend on it. The guide is printed recursively.
+
  ![CS100- FP Part II](https://user-images.githubusercontent.com/72418204/99206088-5d979380-276f-11eb-97b5-d66721bf73af.jpg)
 
  
