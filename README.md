@@ -42,6 +42,7 @@
  > Include a class diagram(s) for each design pattern and a description of the diagram(s). This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
  
  ![FinalProject Composite Diagram](https://user-images.githubusercontent.com/57569111/99162075-40e75700-26ae-11eb-95d7-19782f0eda34.png)
+ ![CS100- FP Part II](https://user-images.githubusercontent.com/72418204/99206088-5d979380-276f-11eb-97b5-d66721bf73af.jpg)
 
  
  > ## Phase III
