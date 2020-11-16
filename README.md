@@ -24,7 +24,7 @@
  >   * Output: The output will be a "to-do list" of some sort that will list the tasks that the user still needs to complete for the week. The program will also output a playlist of the user's choosing. 
  > * 3 Design Patterns We Will Be Implementing:
  >   * Strategy: We will use this pattern to create multiple playlists of different genres. This pattern is perfect for implementing our playlists because each playlist will have the same functions, just different contents. 
- >   * Composite: We will use this pattern to ...
+ >   * Composite: We will use this pattern to create a hierarchy of different categories (i.e. workout, finals, subjects, etc.) and tasks in which the user would like to implement. It will allow the user to input the number of tasks and separate them into different categories. The category composite object can contain several subcategories as well as different tasks. In these subcategories, it can also contain smaller tasks as well. 
  >   * Iterator: We will use this pattern to keep track of the the amount of time the user has worked/still needs to work for the week. 
 
  > ## Phase II
