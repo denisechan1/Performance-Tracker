@@ -14,7 +14,7 @@
  > * 3 Design Patterns We Will Be Implementing:
  >   * Composite: We will use this pattern to create a hierarchy of different categories (i.e. workout, finals, subjects, etc.) and tasks in which the user would like to implement. It will allow the user to input the number of tasks and separate them into different categories. The category composite object can contain several subcategories as well as different tasks. In these subcategories, it can also contain smaller tasks as well. 
  >   * Abstract Factory: We will use this pattern to create the multiple playlists the user can choose from, to display and listen to. We will have a base Playlist class, and create a family of related playlists, the only difference between them being the genre that it falls under. The different objects will be Hip-Hop Playlist, Relaxing Playlist, Pop Playlist, Lo-Fi Playlist, RnB Playlist, and Nature Playlist.
- >   * Strategy: 
+ >   * Strategy: We will use this pattern to display our playlist(s) in 3 different ways: organized by song title alphabetically, song length, and by artist title alphabetically. 
 
  > ## Phase II
 ## Class Diagram 
