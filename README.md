@@ -1,6 +1,4 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\<"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
+
 # Performance Tracker
  > Authors: \<[Cindy Ho](https://github.com/cho102)\>\<[Denise Chan](https://github.com/denisechan1)\>\<[Euijin (Ruth) Hwang]( https://github.com/ruthhwang)\>
  
@@ -15,35 +13,22 @@
  > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
 
 ## Project Description
- > * Many students enjoy listening to music for all activites - sleeping, working out, studying, hanging out with friends. We've found that people have different playlists for different scenarios. We want to provide a way to combine people's love of music with productivity. Our project will help the user stay organized and on track during the week, by setting a countdown for the hours they want to work for, organize their tasks, and provide them with a variety of playlists to use while they execute their work each week. 
+ > * Many students enjoy listening to music for all activites - sleeping, working out, studying, hanging out with friends. We've found that people have different playlists for different scenarios. We want to provide a way to combine people's love of music with productivity. Our project will help the user stay organized and on track during the week, by organizing their tasks and providing them with a variety of playlists to use while they finish their work. 
  > * This project is important to us because as students, productivity is always applicable to our daily lives. Students struggle with feeling the need to be productive in every minute and aspect of their lives. When discussing project ideas, we discussed a mutual love of music. We wanted to combine our love of music and need that many students feel to be productive in one place. That way students can enjoy their daily lives with the music they enjoy. 
  > * Tools We Will Be Using: 
  >   * C++ - This is the language we will be using to implement the project.
  > * Project IO: 
- >   * Input: Initially, we will ask the user for a number of hours they want to work for, for that certain week. That can either be for working out, studying, or both. Then, we will ask them to input their tasks for the week. Finally, we will ask them to choose a playlist that they would like to listen to as they finish their tasks.
- >   * Output: The output will be a "to-do list" of some sort that will list the tasks that the user still needs to complete for the week. The program will also output a playlist of the user's choosing. 
+ >   * Input: We will ask them to input their tasks for the week, for both working out and studying. We will also ask them to choose a playlist that they would like to listen to as they work on their tasks.
+ >   * Output: The output will be the two "to-do lists", one for school and one for working out. The program will also output a playlist of the user's choosing. 
  > * 3 Design Patterns We Will Be Implementing:
- >   * Strategy: We will use this pattern to create multiple playlists of different genres. This pattern is perfect for implementing our playlists because each playlist will have the same functions, just different contents. 
  >   * Composite: We will use this pattern to create a hierarchy of different categories (i.e. workout, finals, subjects, etc.) and tasks in which the user would like to implement. It will allow the user to input the number of tasks and separate them into different categories. The category composite object can contain several subcategories as well as different tasks. In these subcategories, it can also contain smaller tasks as well. 
- >   * Iterator: We will use this pattern to keep track of the the amount of time the user has worked/still needs to work for the week. 
+ >   * Abstract Factory: We will use this pattern to create the multiple playlists the user can choose from, to display and listen to. We will have a base Playlist class, and create a family of related playlists, the only difference between them being the genre that it falls under. The different objects will be Hip-Hop Playlist, Relaxing Playlist, Pop Playlist, Lo-Fi Playlist, RnB Playlist, and Nature Playlist.
+ >   * Strategy: 
 
  > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to 
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
- > * There is no requirement for automation in the project board but feel free to explore those options.
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
-## Class Diagram
- > Include a class diagram(s) for each design pattern and a description of the diagram(s). This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
- 
+## Class Diagram 
 ![FinalProject Composite Diagram](https://user-images.githubusercontent.com/57569111/99225029-3c996780-279c-11eb-915f-6888b290cf1d.png)
 > The composite class diagram shows the relationship between the component(UserGuide), composite (Category) and the leaf (Tasks). The user can input as many categories and tasks they would like to do, how long they want to spend on the task or each category each day and D-Day, which is when they want to complete the task by. The composite object, Category, can contain several more categories and tasks which are then added into a vector. By getting the hours per day and D-Day, we can calculate how much time should be allocated for each task per day that will best fit the user's schedule. The user is also able to print out a guide that shows what task they should do for each day and how long they should spend on it. The guide is printed recursively.
-
- ![CS100- FP Part II](https://user-images.githubusercontent.com/72418204/99206088-5d979380-276f-11eb-97b5-d66721bf73af.jpg)
 
  
  > ## Phase III
