@@ -24,6 +24,9 @@
 ![CS100- FP Part II](https://user-images.githubusercontent.com/72418204/99357793-61a3de00-2861-11eb-8677-db39eed7f132.jpg)
 > The abstract factory class (PlaylistFactory) allows for me to create multiple concrete factories that create all the same types of playlists, but in different ways or sizes. I only have one concrete class because I will be creating one subclass of empty playlists of various types. The types include Hip Hop, EDM, Pop, RnB, Lo-fi, and Nature sounds. 
 
+![strategypattern](https://user-images.githubusercontent.com/30084254/99359040-4934c300-2863-11eb-9cd3-f193aa322eb5.jpg)
+>The strategy pattern we are implementing allows us to sort and display my playlists in three different ways: alphabetically by song title, alphabetically by artist and lastly, by song length. 
+
 
 
  > ## Phase III
