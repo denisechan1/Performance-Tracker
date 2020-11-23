@@ -6,6 +6,7 @@ class UserGuide {
 		virtual void outputTimer() = 0;
 		virtual void calculateTimeEachDay() = 0;
 		virtual string printGuide() = 0;
+		virtual void getName() = 0;
 };
 
 #endif
