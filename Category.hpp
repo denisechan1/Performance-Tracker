@@ -5,7 +5,7 @@
 
 class Category : public UserGuide {
 	public:
-		Category();
+		Category(string, int, int);
 		void calculateTimeEachDay();
 		void outputTimer();
 		string printGuide();

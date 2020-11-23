@@ -5,7 +5,7 @@
 
 class Task : public UserGuide {
 	public:
-		Task();
+		Task(string, int, int);
 		void calculateTimeEachDay();
 		void outputTimer();
 		string printGuide();
