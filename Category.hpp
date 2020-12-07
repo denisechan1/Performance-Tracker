@@ -9,6 +9,7 @@ class Category : public UserGuide {
 		void calculateTimeEachDay();
 		void outputTimer();
 		string printGuide();
+		string getName();
 		void  add(UserGuide*);
 		
 	private:

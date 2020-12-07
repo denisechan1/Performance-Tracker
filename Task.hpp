@@ -9,6 +9,7 @@ class Task : public UserGuide {
 		void calculateTimeEachDay();
 		void outputTimer();
 		string printGuide();
+		string getName();
 
 	private:
 		string title;
