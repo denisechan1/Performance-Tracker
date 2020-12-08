@@ -4,18 +4,21 @@
 #include "UserGuide.hpp"
 
 class Task : public UserGuide {
-	public:
-		Task(string, int, int);
-		void calculateTimeEachDay();
-		void outputTimer();
-		string printGuide();
-		string getName();
+        public:
+                Task(string);
+                void calculateTimeEachDay();
+                double outputTimer();
+                void printGuide();
+                string getName();
+                int getMax();
+                void changeHPD(double);
+                void changeMax(int);
 
-	private:
-		string title;
-		int maxDays;
-		int daysUntilDDay;
-		int hoursPerDay;
+        private:
+                string title;
+                int maxDays;
+                int daysUntilDDay;
+                double hoursPerDay;
 };
 
 #endif

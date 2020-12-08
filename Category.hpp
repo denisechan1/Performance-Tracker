@@ -1,23 +1,32 @@
 #ifndef __CATEGORY__
 #define __CATEGORY__
 
+#include <vector>
 #include "UserGuide.hpp"
 
 class Category : public UserGuide {
-	public:
-		Category(string, int, int);
-		void calculateTimeEachDay();
-		void outputTimer();
-		string printGuide();
-		string getName();
-		void  add(UserGuide*);
-		
-	private:
-		string title;
-		int MaxDays;
-		int hoursPerDay;
-		vector<UserGuide*> vec;
-		int daysUntilDDay;
+        public:
+                Category(string, double, int);
+                void calculateTimeEachDay();
+                double outputTimer();
+                void printGuide();
+                string getName();
+                int getMax();
+                void  add(UserGuide*);
+                void EnterNewGuide();
+                UserGuide* AccessGuide();
+                void changeSpace();
+                UserGuide* at(int);
+                void changeHPD(double);
+                void changeMax(int);
+                int findItem(string);
+
+        private:
+                string title;
+                int maxDays;
+                double hoursPerDay;
+                vector<UserGuide*> vec;
+                int daysUntilDDay;
 };
 
 #endif
