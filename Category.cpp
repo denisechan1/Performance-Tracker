@@ -55,17 +55,6 @@ void Category::changeHPD(double hpd) {
   this->hoursPerDay = hpd;
 }
 
-int Category::findItem(string s) {
-  int num = -1;
-  for (int i = 0; i < vec.size(); ++i) {
-    if (vec.at(i)->getName() == s) {
-      num = i;
-      break;
-    }
-  }
-  return num;
-}
-
 void Category::changeMax(int max) {
   this->maxDays = max;
 }

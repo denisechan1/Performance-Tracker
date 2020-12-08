@@ -19,7 +19,6 @@ class Category : public UserGuide {
                 UserGuide* at(int);
                 void changeHPD(double);
                 void changeMax(int);
-                int findItem(string);
 
         private:
                 string title;
