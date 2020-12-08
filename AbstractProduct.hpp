@@ -7,14 +7,9 @@
 using namespace std;
 
 class Playlist {
-    private: 
-        string title;
-
     public:
         Playlist() {};
-        Playlist(string name){
-            this->title = name;
-        }
+        virtual string getTitle() = 0;
 
 };
 

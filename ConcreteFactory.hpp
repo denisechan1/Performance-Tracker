@@ -3,39 +3,42 @@
 
 #include "AbstractFactory.hpp"
 #include "AbstractProduct.hpp" 
+#include "PlaylistSubclasses.hpp"
 #include <iostream> 
 
 using namespace std; 
 
 class ConcreteFactory : public AbstractFactory {
     public:
-        Playlist* CreateHipHopPlaylist(string name){
-            Playlist* creation = new Playlist(name); 
+        ConcreteFactory() : AbstractFactory() {};
+
+        HipHopPlaylist* CreateHipHopPlaylist(string name) const{
+            HipHopPlaylist* creation = new HipHopPlaylist(name); 
             return creation; 
         }
 
-        Playlist* CreateEDMPlaylist(string name){
-            Playlist* creation = new Playlist(name); 
+        EDMPlaylist* CreateEDMPlaylist(string name) const{
+            EDMPlaylist* creation = new EDMPlaylist(name); 
             return creation; 
         }
 
-        Playlist* CreatePopPlaylist(string name){
-            Playlist* creation = new Playlist(name); 
+        PopPlaylist* CreatePopPlaylist(string name) const{
+            PopPlaylist* creation = new PopPlaylist(name); 
             return creation; 
         }
 
-        Playlist* CreateLoFiPlaylist(string name){
-            Playlist* creation = new Playlist(name); 
+        LoFiPlaylist* CreateLoFiPlaylist(string name) const{
+            LoFiPlaylist* creation = new LoFiPlaylist(name); 
             return creation; 
         }
 
-        Playlist* CreateRnBPlaylist(string name){
-            Playlist* creation = new Playlist(name); 
+        RnBPlaylist* CreateRnBPlaylist(string name) const{
+            RnBPlaylist* creation = new RnBPlaylist(name); 
             return creation; 
         }
 
-        Playlist* CreateNaturalPlaylist(string name){
-            Playlist* creation = new Playlist(name); 
+        NaturalPlaylist* CreateNaturalPlaylist(string name) const{
+            NaturalPlaylist* creation = new NaturalPlaylist(name); 
             return creation; 
         }
 

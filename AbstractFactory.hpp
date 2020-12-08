@@ -4,6 +4,9 @@
 #include <iostream> 
 #include <string>
 
+#include "AbstractProduct.hpp"
+#include "PlaylistSubclasses.hpp"
+
 using namespace std; 
 
 class AbstractFactory {
@@ -34,12 +37,12 @@ public:
     //   }
     // }
     AbstractFactory() {};
-    virtual Playlist* CreateHipHopPlaylist(string name) const = 0;
-    virtual Playlist* CreateEDMPlaylist(string name) const = 0;
-    virtual Playlist* CreatePopPlaylist(string name) const = 0;
-    virtual Playlist* CreateLoFiPlaylist(string name) const = 0;
-    virtual Playlist* CreateRnBPlaylist(string name) const = 0;
-    virtual Playlist* CreateNaturalPlaylist(string name) const = 0;
+    virtual HipHopPlaylist* CreateHipHopPlaylist(string name) const = 0;
+    virtual EDMPlaylist* CreateEDMPlaylist(string name) const = 0;
+    virtual PopPlaylist* CreatePopPlaylist(string name) const = 0;
+    virtual LoFiPlaylist* CreateLoFiPlaylist(string name) const = 0;
+    virtual RnBPlaylist* CreateRnBPlaylist(string name) const = 0;
+    virtual NaturalPlaylist* CreateNaturalPlaylist(string name) const = 0;
 };
 
 #endif //_ABSTRACTFACTORY_HPP_
