@@ -60,4 +60,11 @@ TEST(AddPlaylist, AddNatural){
     EXPECT_EQ(x->getTitle(), natural1);
 }
 
+TEST(AddSongs, AddHipHop){
+    HipHopPlaylist* test = new HipHopPlaylist();
+    vector<string> test1 = test->getSongs();
+
+    EXPECT_EQ(test1.at(0), "On Me");
+}
+
 #endif //_FACTORY_TESTS_HPP
