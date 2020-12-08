@@ -6,6 +6,8 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(test
 	FactoryTesting.cpp
+	Category.cpp
+	Task.cpp
 )
 
 
