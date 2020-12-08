@@ -6,12 +6,6 @@
 #include "Task.hpp"
 #include "gtest/gtest.h"
 
-TEST(AddTest, DNE) {
-  Category* test = new Category("test", 1, 2);
-
-  EXPECT_EQ(test->findItem("subcat"), -1);
-}
-
 
 TEST(AddTest, AddCategory) {
   Category* test = new Category("test", 1, 2);
@@ -19,7 +13,7 @@ TEST(AddTest, AddCategory) {
 
   test->add(subcat);
 
-  EXPECT_EQ(test->findItem("subcat"), 0);
+  EXPECT_EQ(test->at(0), subcat);
 }
 
 TEST(AddTest, AddTask) {
@@ -28,7 +22,7 @@ TEST(AddTest, AddTask) {
 
   test->add(task);
 
-  EXPECT_EQ(test->findItem("task"), 0);
+  EXPECT_EQ(test->at(0), task);
 }
 
 TEST(AddTest, AddMultItems) {
@@ -39,21 +33,21 @@ TEST(AddTest, AddMultItems) {
     Task* biology = new Task("biology");
     Task* chem = new Task("chem");
     Task* physic = new Task("physics");
-    Task* algrebra =new Task("algebra");
+    Task* algebra =new Task("algebra");
     Category *math = new Category("math", 1, 2);
     Category *science = new Category("science", 1, 2);
     finalStudy->add(english);
     finalStudy->add(cs);
     finalStudy->add(math);
     math->add(calc);
-    math->add(algrebra);       
+    math->add(algebra);       
     finalStudy->add(science);
     science->add(biology);
     science->add(chem);
     science->add(physic);
 
-  EXPECT_EQ(finalStudy->findItem("math"), 2);
-  EXPECT_EQ(math->findItem("algebra"), 1);
+  EXPECT_EQ(finalStudy->at(2), math);
+  EXPECT_EQ(math->at(1), algebra);
 }
 
 TEST(calculateTimeEachDay, OneCategory) {
