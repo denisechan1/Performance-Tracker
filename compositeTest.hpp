@@ -15,7 +15,7 @@ TEST(AddTest, AddCategory) {
 
   test->add(subcat);
 
-  EXPECT_EQ(test->at(0), subcat);
+  EXPECT_EQ(test->findItem("subcat"), 0);
 }
 
 TEST(AddTest, AddTask) {
@@ -24,7 +24,7 @@ TEST(AddTest, AddTask) {
 
   test->add(task);
 
-  EXPECT_EQ(test->at(0), task);
+  EXPECT_EQ(test->findItem("task"), 0);
 }
 
 TEST(AddTest, AddMultItems) {
@@ -49,8 +49,8 @@ TEST(AddTest, AddMultItems) {
     science->add(physic);
     test->add(subcat);
 
-  EXPECT_EQ(finalStudy->at(2), math);
-  EXPECT_EQ(math->at(1), algebra);
+  EXPECT_EQ(finalStudy->findItem("math"), 2);
+  EXPECT_EQ(math->findItem("algebra"), 1);
 }
 
 TEST(calculateTimeEachDay, OneCategory) {

@@ -3,11 +3,11 @@ using namespace std;
 
 #include "Task.hpp"
 
-Task::Task(string ttle, double hours, int days) {
+Task::Task(string ttle) {
         title = ttle;
-        hoursPerDay = hours;
-        daysUntilDDay = days;
-        maxDays = days;
+        hoursPerDay = 0;
+        daysUntilDDay = 0;
+        maxDays = 0;
 }
 
 string Task::getName() {
@@ -15,7 +15,7 @@ string Task::getName() {
 }
 
 void Task::calculateTimeEachDay() {
-  
+  return;
 }
 
 double Task::outputTimer() {
@@ -24,10 +24,17 @@ double Task::outputTimer() {
 
 void Task::printGuide() {
     printSpace();
-    cout << getName() <<endl;
+    cout << getName() << " (Total hours: " << hoursPerDay << ")" << endl;
 }
 
 int Task::getMax() {
   return maxDays;
 }
 
+void Task::changeHPD(double hpd) {
+  this->hoursPerDay = hpd;
+}
+
+void Task::changeMax(int max) {
+  this->maxDays = max;
+}

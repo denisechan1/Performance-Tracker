@@ -17,6 +17,9 @@ class Category : public UserGuide {
                 UserGuide* AccessGuide();
                 void changeSpace();
                 UserGuide* at(int);
+                void changeHPD(double);
+                void changeMax(int);
+                int findItem(string);
 
         private:
                 string title;
@@ -24,7 +27,6 @@ class Category : public UserGuide {
                 double hoursPerDay;
                 vector<UserGuide*> vec;
                 int daysUntilDDay;
-                int space = 1;
 };
 
 #endif

@@ -5,12 +5,14 @@
 
 class Task : public UserGuide {
         public:
-                Task(string, double, int);
+                Task(string);
                 void calculateTimeEachDay();
                 double outputTimer();
                 void printGuide();
                 string getName();
                 int getMax();
+                void changeHPD(double);
+                void changeMax(int);
 
         private:
                 string title;
