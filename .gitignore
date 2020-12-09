@@ -7,3 +7,4 @@ lib/
 test/
 main
 test
+googletest
