@@ -6,12 +6,14 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(test
 	Testing.cpp
-  Category.cpp
+ 	Category.cpp
 	Task.cpp
 )
 
 ADD_EXECUTABLE(main
 	main.cpp
+	Category.cpp
+	Task.cpp
 )
 
 
