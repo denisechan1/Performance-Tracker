@@ -1,7 +1,10 @@
 CMakeCache.txt
 cmake_install.cmake
-CMakeFiles/
-Makefile/
+CMakeFiles
+Makefile
 bin/
 lib/
 test/
+main
+test
+googletest
