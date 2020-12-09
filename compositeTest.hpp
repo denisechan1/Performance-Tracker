@@ -51,12 +51,48 @@ TEST(AddTest, AddMultItems) {
 }
 
 TEST(calculateTimeEachDay, OneCategory) {
-  Category* test = new Category("test", 5, 10);
-  
+  Category* test = new Category("test", 4, 10);
+  EXPECT_EQ(test->outputTimer(), 4);
+}
+
+TEST(calculateTimeEachDay, MultItems) {
+  Category* test = new Category("test", 4, 10);
+  Task* task1 = new Task("task1");
+  Task* task2 = new Task("task2");
+  test->add(task1);
+  test->add(task2);
+
+  EXPECT_EQ(task1->outputTimer(), 2);
 }
 
 TEST(calculateTimeEachDay, TwoCategories) {
-  
+  Category* test = new Category("test", 6, 10);
+  Category* test1 = new Category("test1", 0, 0);
+  Task* task1 = new Task("task1");
+  Task* task2 = new Task("task2");
+  test->add(test1);
+  test->add(task1);
+  test->add(task2);
+
+  EXPECT_EQ(task1->outputTimer(), 2);
+  EXPECT_EQ(test1->outputTimer(), 2);
+}
+
+TEST(calculateTimeEachDay, OneTaskTwoCategories) {
+  Category* test = new Category("test", 6, 10);
+  Category* test1 = new Category("test1", 0, 0);
+  Task* t1t1 = new Task("t1t1");
+  Task* t1t2 = new Task("t1t2");
+  Task* task1 = new Task("task1");
+  Task* task2 = new Task("task2");
+  test->add(test1);
+  test->add(task1);
+  test->add(task2);
+  test1->add(t1t1);
+  test1->add(t1t2);
+
+  EXPECT_EQ(task1->outputTimer(), 2);
+  EXPECT_EQ(t1t1->outputTimer(), 1);
 }
 
 #endif
