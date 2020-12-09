@@ -10,8 +10,12 @@
 
 using namespace std;
 
-//Composite class functions
 void printMenu();
+
+
+/*Composite Pattern Functions*/
+void AddToGuide();
+void PrintTop();
 void EnterNewGuide();
 Category* AccessGuide();
 void addItem(Category*);
@@ -24,9 +28,8 @@ void printMenu2();
 //Strategy class functions
 
 
-int main(){
-
-  // composite pattern
+int main() {
+    // composite pattern
     int control = 1;
     int input;
     while (control) {
@@ -36,23 +39,10 @@ int main(){
         EnterNewGuide();
       }
       else if (input == 2) {
-        if (top.size() == 0) {
-          cout << "No guides to access.\n" << endl;
-        }
-        else {
-          Category* temp = AccessGuide();
-          addItem(temp);
-        }
+        AddToGuide();
       }
       else if (input == 3) {
-        if (top.size() == 0) {
-          cout << "No guides to access.\n" << endl;
-        }
-        else {
-          cout << "Guide: " << endl;
-          AccessGuide()->printGuide();
-          cout << endl;
-        }
+        PrintTop();
       }
       else if (input == 0) {
         cout << "Thank you!" << endl;
@@ -62,7 +52,6 @@ int main(){
         cout << "ENTER VALID NUMBER\n" << endl;
       }
     }
-
 
   //abstract factory pattern
   int control2 = 1;
@@ -153,6 +142,14 @@ int main(){
     return 0;
 }
 
+void printMenu() {
+      cout << "Enter 1 to create new guide." << endl;
+      cout << "Enter 2 add new task/catergory to existing guide." << endl;
+      cout << "Enter 3 to print out guide." << endl;
+      cout << "Enter 0 to quit program." << endl;
+      cout << "Enter job you want to do: ";
+}
+
 
 void EnterNewGuide() {
   string name;
@@ -165,9 +162,9 @@ void EnterNewGuide() {
   int dday;
   cin >> dday;
   cout << endl;
-  Category* main = new Category(name, hpd, dday);
-  addItem(main);
+  Category* main = new Category (name, hpd, dday);
   top.push_back(main);
+  addItem(main);
 }
 
 Category* AccessGuide() {
@@ -200,30 +197,18 @@ void addItem(Category* temp) {
     cin >> input;
     if (input == 1) {
       string name1;
-      double hpd1;
-      int dday1;
       cout << "Enter name of Category: ";
       cin >> name1;
-      cout << "Enter hours planned to study each day: ";
-      cin >> hpd1;
-      cout << "Enter how many days until D-Day: ";
-      cin >> dday1;
-      Category* subcat = new Category(name1, hpd1, dday1);
+      Category* subcat = new Category(name1, 0, 0);
       temp->add(subcat);
       top.push_back(subcat);
       cout << endl;
     }
     else if (input == 2) {
       string name2;
-      double hpd2;
-      int dday2;
       cout << "Enter name of Task: ";
       cin >> name2;
-      cout << "Enter hours planned to study each day: ";
-      cin >> hpd2;
-      cout << "Enter how many days until D-Day: ";
-      cin >> dday2;
-      Task* task = new Task(name2, hpd2, dday2);
+      Task* task = new Task(name2);
       temp->add(task);
       cout << endl;
     }
@@ -238,12 +223,29 @@ void addItem(Category* temp) {
   }
 }
 
-void printMenu() {
-      cout << "Enter 1 to create new guide." << endl;
-      cout << "Enter 2 add new task/catergory to existing guide." << endl;
-      cout << "Enter 3 to print out guide." << endl;
-      cout << "Enter 0 to quit program." << endl;
-      cout << "Enter job you want to do: ";
+void AddToGuide() {
+        if (top.size() == 0) {
+          cout << "No guides to access.\n" << endl;
+        }
+        else {
+          Category* temp = AccessGuide();
+          addItem(temp);
+        }
+}
+
+void PrintTop() {
+        if (top.size() == 0) {
+          cout << "No guides to access.\n" << endl;
+        }
+        else {
+          for (int i = 0; i < top.size(); ++i) {
+            top.at(i)->calculateTimeEachDay();
+          }
+          Category* print = AccessGuide();
+          cout << "Guide (Total days: " << print->getMax() << "): " << endl;
+          print->printGuide();
+          cout << endl;
+        }
 }
 
 void printMenu2() {
@@ -255,5 +257,3 @@ void printMenu2() {
       cout << "Enter 'r' to listen to an RnB playlist." << endl;
       cout << "Enter 'n' to listen to a Nature Sound playlist." << endl;
 }
-
-
