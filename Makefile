@@ -177,6 +177,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -247,6 +260,7 @@ Category.o: Category.cpp.o
 
 # target to build an object file
 Category.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Category.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Category.cpp.o
 .PHONY : Category.cpp.o
 
@@ -256,6 +270,7 @@ Category.i: Category.cpp.i
 
 # target to preprocess a source file
 Category.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Category.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Category.cpp.i
 .PHONY : Category.cpp.i
 
@@ -265,35 +280,9 @@ Category.s: Category.cpp.s
 
 # target to generate assembly for a file
 Category.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Category.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Category.cpp.s
 .PHONY : Category.cpp.s
-
-FactoryTesting.o: FactoryTesting.cpp.o
-
-.PHONY : FactoryTesting.o
-
-# target to build an object file
-FactoryTesting.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/FactoryTesting.cpp.o
-.PHONY : FactoryTesting.cpp.o
-
-FactoryTesting.i: FactoryTesting.cpp.i
-
-.PHONY : FactoryTesting.i
-
-# target to preprocess a source file
-FactoryTesting.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/FactoryTesting.cpp.i
-.PHONY : FactoryTesting.cpp.i
-
-FactoryTesting.s: FactoryTesting.cpp.s
-
-.PHONY : FactoryTesting.s
-
-# target to generate assembly for a file
-FactoryTesting.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/FactoryTesting.cpp.s
-.PHONY : FactoryTesting.cpp.s
 
 Task.o: Task.cpp.o
 
@@ -301,6 +290,7 @@ Task.o: Task.cpp.o
 
 # target to build an object file
 Task.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Task.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Task.cpp.o
 .PHONY : Task.cpp.o
 
@@ -310,6 +300,7 @@ Task.i: Task.cpp.i
 
 # target to preprocess a source file
 Task.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Task.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Task.cpp.i
 .PHONY : Task.cpp.i
 
@@ -319,8 +310,63 @@ Task.s: Task.cpp.s
 
 # target to generate assembly for a file
 Task.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Task.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Task.cpp.s
 .PHONY : Task.cpp.s
+
+Testing.o: Testing.cpp.o
+
+.PHONY : Testing.o
+
+# target to build an object file
+Testing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Testing.cpp.o
+.PHONY : Testing.cpp.o
+
+Testing.i: Testing.cpp.i
+
+.PHONY : Testing.i
+
+# target to preprocess a source file
+Testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Testing.cpp.i
+.PHONY : Testing.cpp.i
+
+Testing.s: Testing.cpp.s
+
+.PHONY : Testing.s
+
+# target to generate assembly for a file
+Testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Testing.cpp.s
+.PHONY : Testing.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -338,16 +384,20 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... main"
 	@echo "... test"
 	@echo "... Category.o"
 	@echo "... Category.i"
 	@echo "... Category.s"
-	@echo "... FactoryTesting.o"
-	@echo "... FactoryTesting.i"
-	@echo "... FactoryTesting.s"
 	@echo "... Task.o"
 	@echo "... Task.i"
 	@echo "... Task.s"
+	@echo "... Testing.o"
+	@echo "... Testing.i"
+	@echo "... Testing.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
