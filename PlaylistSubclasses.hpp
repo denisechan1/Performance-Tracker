@@ -104,9 +104,9 @@ class PopPlaylist : public Playlist {
 class LoFiPlaylist : public Playlist {
     private: 
         string title;
-        vector<string> songs{};
-        vector<string> artists{};
-        vector<double> times{};
+        vector<string> songs{"Gasteria", "Stripe Two", "Crooked Elements", "Top Floor", "Fly Away", "Seek Tone", "Hazy Days", "A Promise", "Reassuring Drops", "H2", "Bleepy Booper", "Toro", "Alleviate", "City Life", "Alien Signals" };
+        vector<string> artists{"Gaura", "Tom Oswald", "Kelly Kane", "Moody Bit", "8teen, Versus Beats", "Jon Timber", "Ekolon", "Tr_at", "Jes Nil", "Hattab", "Lysergic Teaparty", "En Rie", "Zifon", "ROOM7", "Lo-Fi Like, Simax"};
+        vector<double> times{1.08, 1.27, 1.38, 1.44, 2.43, 1.39, 1.22, 1.59, 1.19, 1.51, 1.44, 1.26, 1.26, 1.48, 2.06};
 
 
 
@@ -137,9 +137,9 @@ class LoFiPlaylist : public Playlist {
 class RnBPlaylist : public Playlist {
     private: 
         string title;
-        vector<string> songs{};
-        vector<string> artists{};
-        vector<double> times{};
+        vector<string> songs{"Not Another Love Song", "Damage", "Hit Different", "Wake Up Love", "Pick Up Your Feelings", "Sending My Love", "Outta Time", "Your Turn", "PERSIAN RUGS", "Rain", "Bad Habits", "Borderline", "All About You", "U 2 Luv", "Lost One"};
+        vector<string> artists{"Ella Mai", "H.E.R.", "SZA, The Neptunes, Parrell Williams", "Teyana Tayor, Iman", "Jazmine Sullivan", "Chloe x Halle", "Bryson Tiller, Drake", "TY Dolla Sign, 6LACK", "PARTYNEXTDOOR", "Trey Songz, Swae Lee", "Usher", "Brandy", "Leon Bridges, Lucky Daye", "Ne-Yo, Jeremih", "Jazmine Sullivan"};
+        vector<double> times{3.38, 3.43, 3.22, 3.35, 3.52, 2.53, 3.19, 5.2, 2.54, 3.44, 4.17, 5.12, 3.0, 3.06, 3.0};
 
 
 
@@ -170,9 +170,9 @@ class RnBPlaylist : public Playlist {
 class NaturalPlaylist : public Playlist {
     private: 
         string title;
-        vector<string> songs{};
-        vector<string> artists{};
-        vector<double> times{};
+        vector<string> songs{"Suburban Forest Rain 1", "Birds in Forest Rainfall", "Quiet Rain in River", "Power and Meditation", "Forest Rain", "Empowering Rain", "Birds by the River", "Small Forest River", "Dripping Wet Leaves and Thunder", "Atlanta Rain", "Rain in the Woods", "Bustling River Sounds", "Chill Waves & Wind in Leaves", "Bird Showers", "Smoothe Suburban Forest Rain 2"};
+        vector<string> artists{"Aquagirl", "Zen Master", "Stereo Outdoor Sampling", "Yuhe", "Rain Recordings", "Four Winds", "Blueberry House Meditations", "The Relaxing Sounds of Swedish Nature", "Wonderful Escape", "Natsound", "Outdoor Field Recorders", "Rivers and Streams", "Pinetree Way", "Creatress", "Mori Desu"};
+        vector<double> times{2.18, 3.24, 2.0, 3.0, 2.50, 2.52, 2.38, 3.32, 3.49, 2.5, 3.28, 2.5, 4.01, 2.22, 2.34};
 
 
 
