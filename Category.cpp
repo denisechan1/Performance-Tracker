@@ -58,3 +58,7 @@ void Category::changeHPD(double hpd) {
 void Category::changeMax(int max) {
   this->maxDays = max;
 }
+
+int Category::getItems(){
+  return vec.size();
+}

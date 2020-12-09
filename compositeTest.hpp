@@ -95,4 +95,86 @@ TEST(calculateTimeEachDay, OneTaskTwoCategories) {
   EXPECT_EQ(t1t1->outputTimer(), 1);
 }
 
+
+TEST(calculateTimeEachDay, DecNums) {
+  Category* test = new Category("test", 5, 2);
+  Category* subcat = new Category("subcat", 1, 3);
+  Task* task = new Task("task");
+  Task* task1 = new Task("task1");
+  Task* task2 = new Task("task2");
+  Task* task3 = new Task("task3");
+  Task* task4 = new Task("task4");
+  test->add(subcat);
+  test->add(task);
+  test->add(task1);
+  test->add(task4);
+  subcat->add(task2);
+  subcat->add(task3);
+
+  EXPECT_EQ(subcat->outputTimer(), 1.25);
+  EXPECT_EQ(test->outputTimer(), 5);
+}
+
+TEST(checkMaxDays, OneCategory) {
+  Category* test = new Category("test", 1, 2);
+
+  EXPECT_EQ(test->getMax(), 2);
+}
+
+TEST(checkMaxDays, TwoItems) {
+  Category* test = new Category("test", 1, 2);
+  Task* task = new Task("task");
+  test->add(task);
+
+  EXPECT_EQ(task->getMax(), 2);
+  EXPECT_EQ(test->getMax(), 2);
+}
+
+TEST(checkMaxDays, TwoCategories) {
+  Category* test = new Category("test", 1, 2);
+  Category* test1 = new Category("test1", 1, 4);
+  Task* task = new Task("task");
+  test->add(task);
+  test->add(test1);
+  
+  EXPECT_EQ(test1->getMax(), 2);
+  EXPECT_EQ(test->getMax(), 2);
+}
+
+TEST(CheckInput, NoItems) {
+  Category* test = new Category("test", 1, 2);
+
+  EXPECT_EQ(test->getItems(), 0);
+}
+
+TEST(CheckInput, MultItems) {
+  Category* test = new Category("test", 1, 2);
+  Category* subcat = new Category("subcat", 1, 3);
+  Task* task = new Task("task");
+  Task* task1 = new Task("task1");
+  test->add(subcat);
+  test->add(task);
+  test->add(task1);
+
+  EXPECT_EQ(subcat->getItems(), 0);
+  EXPECT_EQ(test->getItems(), 3);
+}
+
+TEST(CheckInpput, TwoCategories) {
+  Category* test = new Category("test", 1, 2);
+  Category* subcat = new Category("subcat", 1, 3);
+  Task* task = new Task("task");
+  Task* task1 = new Task("task1");
+  Task* task2 = new Task("task2");
+  Task* task3 = new Task("task3");
+  test->add(subcat);
+  test->add(task);
+  test->add(task1);
+  subcat->add(task2);
+  subcat->add(task3);
+
+  EXPECT_EQ(subcat->getItems(), 2);
+  EXPECT_EQ(test->getItems(), 3);
+}
+
 #endif

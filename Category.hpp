@@ -13,12 +13,10 @@ class Category : public UserGuide {
                 string getName();
                 int getMax();
                 void  add(UserGuide*);
-                void EnterNewGuide();
-                UserGuide* AccessGuide();
-                void changeSpace();
                 UserGuide* at(int);
                 void changeHPD(double);
                 void changeMax(int);
+		int getItems();
 
         private:
                 string title;
