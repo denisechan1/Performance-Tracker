@@ -19,7 +19,7 @@ void printMenu2();
 
 
 int main() {
-	
+	//composite pattern
 	CompositeInput();
 	
   //abstract factory pattern
@@ -102,7 +102,6 @@ int main() {
       cout << "Not a valid input. Please try again." << endl;
     }
   }
-
 
   //strategy pattern
 
