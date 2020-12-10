@@ -18,7 +18,7 @@
 
  > ## Phase II
 ## Class Diagram 
-![FinalProject Composite Diagram](https://user-images.githubusercontent.com/57569111/99225029-3c996780-279c-11eb-915f-6888b290cf1d.png)
+![FinalProject Composite Diagram (1)](https://user-images.githubusercontent.com/57569111/101808258-fa2d2700-3aca-11eb-881b-3dd9928e6c74.png)
 > The composite class diagram shows the relationship between the component(UserGuide), composite (Category) and the leaf (Tasks). The user can input as many categories and tasks they would like to do, how long they want to spend on the task or each category each day and D-Day, which is when they want to complete the task by. The composite object, Category, can contain several more categories and tasks which are then added into a vector. By getting the hours per day and D-Day, we can calculate how much time should be allocated for each task per day that will best fit the user's schedule. The user is also able to print out a guide that shows what task they should do for each day and how long they should spend on it. The guide is printed recursively.
 
 <img width="1407" alt="CS100- FP Part II (Updated)" src="https://user-images.githubusercontent.com/72418204/101465372-b7b1f180-38f4-11eb-9090-7c20d1ce7f9c.png">

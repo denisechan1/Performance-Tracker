@@ -64,7 +64,7 @@ class artistAlphabetical : public Strategy{
             while (currIndex > 0 && artist.at(currIndex - 1) > artist.at(currIndex)) {
                 string artistTemp = artist.at(currIndex);
                 string songTemp = song.at(currIndex);
-                int timeTemp = length.at(currIndex);
+                double timeTemp = length.at(currIndex);
 
                 artist.at(currIndex) = artist.at(currIndex - 1);
                 song.at(currIndex) = song.at(currIndex - 1);
@@ -77,6 +77,18 @@ class artistAlphabetical : public Strategy{
                 currIndex--;
                 }
         }
+    }
+
+    vector<string> getS(){
+        return song;
+    }
+
+    vector<string> getA(){
+        return artist;
+    }
+
+    vector<double> getL(){
+        return length;
     }
 
     private:

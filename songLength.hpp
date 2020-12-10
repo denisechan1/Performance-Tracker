@@ -67,7 +67,7 @@ class songLength : public Strategy{
 				}
 				if (min != i){
 					//swap(length.at(j), length.at(min));
-					int lengthTemp = length.at(i);
+					double lengthTemp = length.at(i);
             				length.at(i) =  length.at(min);
             				length.at(min) = lengthTemp;
 
@@ -82,22 +82,19 @@ class songLength : public Strategy{
                                         song.at(min) = songTemp;
 				}
 			}
-			for(unsigned int i = 0; i < song.size(); i++){
-                                cout << song.at(i) << "    " << artist.at(i) << "    " << length.at(i) << endl;
-                        }
 
 		}
 
 		vector<string> getS(){
-            return this->song;
+            return song;
         }
 
         vector<string> getA(){
-        return this->artist;
+        	return artist;
         }
 
         vector<double> getL(){
-        return this->length;
+        	return length;
         }
 
     private:

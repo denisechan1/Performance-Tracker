@@ -73,20 +73,22 @@ class songAlphabetical : public Strategy{
                    length.at(k) = timeTemp;
                    artist.at(k) = artistTemp;
                }
+
             }
         }
 
     }
-    vector<string>getS(){
-        return this->song;
+
+    vector<string> getS(){
+        return song;
     }
 
     vector<string>getA(){
-        return this->artist;
+        return artist;
     }
 
     vector<double>getL(){
-        return this->length;
+        return length;
     }
  
     private:
