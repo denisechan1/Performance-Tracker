@@ -5,6 +5,9 @@
 #include "CompositeInput.hpp"
 #include "ConcreteFactory.hpp"
 #include "PlaylistSubclasses.hpp"
+#include "songLength.hpp"
+#include "songAlphabetical.hpp"
+#include "artistAlphabetical.hpp"
 
 #include <vector>
 #include <string>
@@ -13,6 +16,7 @@ using namespace std;
 
 //Abstract Factory class functions
 void printMenu2();
+void printMenu3();
 
 
 //Strategy class functions
@@ -25,6 +29,8 @@ int main() {
   //abstract factory pattern
   int control2 = 1;
   char input2;
+  char input3;
+  string pname;
   vector<string> chosensongs;
   vector<string> chosenartists;
   vector<double> chosentimes;
@@ -35,7 +41,6 @@ int main() {
     cout << "\n\n" << endl;
     if (input2 == 'h'){
       ConcreteFactory* choice = new ConcreteFactory();
-      string pname;
       cout << "Enter a name for the Hip Hop playlist: " << endl;
       cin >> pname;
       cout << "\n\n" << endl;
@@ -43,11 +48,35 @@ int main() {
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
       chosentimes = user->getTimes();
+
+      //strategy pattern
+      printMenu3();
+      cin >> input3;
+      if (input3 == 's'){
+        songAlphabetical* final = new songAlphabetical(user);
+        final->bubbleSort();
+        final->display();
+
+        // for(unsigned int i = 0; i < final->getS().size(); i++){
+        //     cout << final->getS().at(i) << "    " << final->getA().at(i) << "    " << final->getL().at(i) << endl;
+        // }
+
+      }
+      else if (input3 == 'a'){
+        artistAlphabetical* final = new artistAlphabetical(user);
+        final->insertionSort();
+        final->display();
+      }
+      else{
+        songLength* final = new songLength(user);
+        final->selectionSort();
+        final->display();
+      }
+
       control2 = 0;
     }
     else if (input2 == 'e'){
       ConcreteFactory* choice = new ConcreteFactory();
-      string pname;
       cout << "Enter a name for the EDM playlist: " << endl;
       cin >> pname;
       cout << "\n\n" << endl;
@@ -55,11 +84,31 @@ int main() {
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
       chosentimes = user->getTimes();
+      cout << "Playlist: " << pname << endl;
+
+      //strategy pattern
+      printMenu3();
+      cin >> input3;
+      if (input3 == 's'){
+        songAlphabetical* final = new songAlphabetical(user);
+        final->bubbleSort();
+        final->display();
+      }
+      else if (input3 == 'a'){
+        artistAlphabetical* final = new artistAlphabetical(user);
+        final->insertionSort();
+        final->display();
+      }
+      else{
+        songLength* final = new songLength(user);
+        final->selectionSort();
+        final->display();
+      }
+
       control2 = 0; 
     }
     else if (input2 == 'p'){
       ConcreteFactory* choice = new ConcreteFactory();
-      string pname;
       cout << "Enter a name for the Pop playlist: " << endl;
       cin >> pname;
       cout << "\n\n" << endl;
@@ -67,11 +116,30 @@ int main() {
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
       chosentimes = user->getTimes();
+
+      //strategy pattern
+      printMenu3();
+      cin >> input3;
+      if (input3 == 's'){
+        songAlphabetical* final = new songAlphabetical(user);
+        final->bubbleSort();
+        final->display();
+      }
+      else if (input3 == 'a'){
+        artistAlphabetical* final = new artistAlphabetical(user);
+        final->insertionSort();
+        final->display();
+      }
+      else{
+        songLength* final = new songLength(user);
+        final->selectionSort();
+        final->display();
+      }
+
       control2 = 0; 
     }
     else if (input2 == 'l'){
       ConcreteFactory* choice = new ConcreteFactory();
-      string pname;
       cout << "Enter a name for the Lo-Fi playlist: " << endl;
       cin >> pname;
       cout << "\n\n" << endl;
@@ -79,11 +147,30 @@ int main() {
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
       chosentimes = user->getTimes();
+
+      //strategy pattern
+      printMenu3();
+      cin >> input3;
+      if (input3 == 's'){
+        songAlphabetical* final = new songAlphabetical(user);
+        final->bubbleSort();
+        final->display();
+      }
+      else if (input3 == 'a'){
+        artistAlphabetical* final = new artistAlphabetical(user);
+        final->insertionSort();
+        final->display();
+      }
+      else{
+        songLength* final = new songLength(user);
+        final->selectionSort();
+        final->display();
+      }
+
       control2 = 0; 
     }
     else if (input2 == 'r'){
       ConcreteFactory* choice = new ConcreteFactory();
-      string pname;
       cout << "Enter a name for the RnB playlist: " << endl;
       cin >> pname;
       cout << "\n\n" << endl;
@@ -91,11 +178,30 @@ int main() {
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
       chosentimes = user->getTimes();
+
+      //strategy pattern
+      printMenu3();
+      cin >> input3;
+      if (input3 == 's'){
+        songAlphabetical* final = new songAlphabetical(user);
+        final->bubbleSort();
+        final->display();
+      }
+      else if (input3 == 'a'){
+        artistAlphabetical* final = new artistAlphabetical(user);
+        final->insertionSort();
+        final->display();
+      }
+      else{
+        songLength* final = new songLength(user);
+        final->selectionSort();
+        final->display();
+      }
+
       control2 = 0; 
     }
     else if (input2 == 'n'){
       ConcreteFactory* choice = new ConcreteFactory();
-      string pname;
       cout << "Enter a name for the Nature Sounds playlist: " << endl;
       cin >> pname;
       cout << "\n\n" << endl;
@@ -103,6 +209,26 @@ int main() {
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
       chosentimes = user->getTimes();
+
+      //strategy pattern
+      printMenu3();
+      cin >> input3;
+      if (input3 == 's'){
+        songAlphabetical* final = new songAlphabetical(user);
+        final->bubbleSort();
+        final->display();
+      }
+      else if (input3 == 'a'){
+        artistAlphabetical* final = new artistAlphabetical(user);
+        final->insertionSort();
+        final->display();
+      }
+      else{
+        songLength* final = new songLength(user);
+        final->selectionSort();
+        final->display();
+      }
+
       control2 = 0; 
     }
     else if (input2 == 'q'){
@@ -115,21 +241,28 @@ int main() {
     }
   }
 
+  // cout << "Playlist: " << pname << endl;
+
   //strategy pattern
-
-//ruth when you start the vectors for u to sort to output will be: chosensongs, chosenartists, chosentimes
-
     return 0;
 }
 
 void printMenu2() {
-      cout << "\n\n\n" << endl;
-      cout << "Choose a playlist to listen to: " << endl;
-      cout << "Enter 'h' to listen to a Hip Hop playlist." << endl;
-      cout << "Enter 'e' to listen to an EDM playlist." << endl;
-      cout << "Enter 'p' to listen to a Pop playlist." << endl;
-      cout << "Enter 'l' to listen to a Lo-Fi playlist." << endl;
-      cout << "Enter 'r' to listen to an RnB playlist." << endl;
-      cout << "Enter 'n' to listen to a Nature Sound playlist." << endl;
-      cout << "Enter 'q' to quit playlist menu." << endl;
+  cout << "\n\n\n" << endl;
+  cout << "Choose a playlist to listen to: " << endl;
+  cout << "Enter 'h' to listen to a Hip Hop playlist." << endl;
+  cout << "Enter 'e' to listen to an EDM playlist." << endl;
+  cout << "Enter 'p' to listen to a Pop playlist." << endl;
+  cout << "Enter 'l' to listen to a Lo-Fi playlist." << endl;
+  cout << "Enter 'r' to listen to an RnB playlist." << endl;
+  cout << "Enter 'n' to listen to a Nature Sound playlist." << endl;
+  cout << "Enter 'q' to quit playlist menu." << endl;
+  }
+
+void printMenu3() {
+  cout << "\n\n" << endl;
+  cout << "Choose how you would like to view your chosen playlist: " << endl;
+  cout << "Enter 's' to see the playlist organized alphabetically by song title." << endl;
+  cout << "Enter 'a' to see the playlist organized alphabetically by artist name." << endl;
+  cout << "Enter 't' to see the playlist organized in ascending order of song length." << endl;
 }

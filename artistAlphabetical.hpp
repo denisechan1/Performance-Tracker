@@ -7,65 +7,102 @@
   
 class artistAlphabetical : public Strategy{
     public:
-
+        artistAlphabetical() {} ;
         artistAlphabetical(HipHopPlaylist* playlist){
-            playlist = playlist;
+            playlistH = playlist;
+            vector<double> length = playlistH->getTimes();
+    	    vector<string> artist = playlistH->getArtists();
+    	    vector<string> song = playlistH->getSongs();
         }
 
         artistAlphabetical(EDMPlaylist* playlist){
-            playlist = playlist;
+            playlistE = playlist;
+            vector<double> length = playlistE->getTimes();
+    	    vector<string> artist = playlistE->getArtists();
+    	    vector<string> song = playlistE->getSongs();
         }
 
         artistAlphabetical(PopPlaylist* playlist){
-            playlist = playlist;
+            playlistP = playlist;
+            vector<double> length = playlistP->getTimes();
+    	    vector<string> artist = playlistP->getArtists();
+    	    vector<string> song = playlistP->getSongs();
         }
 
         artistAlphabetical(LoFiPlaylist* playlist){
-            playlist = playlist;
+            playlistL = playlist;
+            vector<double> length = playlistL->getTimes();
+    	    vector<string> artist = playlistL->getArtists();
+    	    vector<string> song = playlistL->getSongs();
         }
 
         artistAlphabetical(RnBPlaylist* playlist){
-            playlist = playlist;
+            playlistR = playlist;
+            vector<double> length = playlistR->getTimes();
+    	    vector<string> artist = playlistR->getArtists();
+    	    vector<string> song = playlistR->getSongs();
         }
 
         artistAlphabetical(NaturalPlaylist* playlist){
-            playlist = playlist;
+            playlistN = playlist;
+            vector<double> length = playlistN->getTimes();
+    	    vector<string> artist = playlistN->getArtists();
+    	    vector<string> song = playlistN->getSongs();
         }
+
+    void display(){			
+        for(unsigned int i = 0; i < song.size(); i++){
+            cout << song.at(i) << "    " << artist.at(i) << "    " << length.at(i) << endl;
+        }
+    }
 
 	void insertionSort() {
 
-   	     vector<double> length = playlist.getTimes();
-    	     vector<string> artist = playlist.getArtists();
-    	     vector<double> song = playlist.getSongs();
+        for(unsigned int i = 1; i < artist.size(); i++) {
+            int currIndex = i;
 
-    	     for(unsigned int i = 1; i < artist.size(); i++) {
-        	int currIndex = i;
+            while (currIndex > 0 && artist.at(currIndex - 1) > artist.at(currIndex - 1)) {
+                string artistTemp = artist.at(currIndex);
+                string songTemp = song.at(currIndex);
+                int timeTemp = length.at(currIndex);
 
-	     	while (currIndex > 0 && artist[currIndex - 1] > artist[currIndex]) {
-            	    string artistTemp = artist[currIndex];
-            	    string songTemp = song[currIndex];
-            	    int timeTemp = time[currIndex];
+                artist.at(currIndex) = artist.at(currIndex - 1);
+                song.at(currIndex) = song.at(currIndex - 1);
+                length.at(currIndex) = length.at(currIndex - 1);
 
-	            artist[currIndex] = artist[currIndex - 1];
-        	    song[currIndex] = song[currIndex - 1];
-           	    time[currIndex] = time[currIndex - 1];
+                artist.at(currIndex - 1) = artistTemp;
+                song.at(currIndex - 1) = songTemp;
+                length.at(currIndex - 1) = timeTemp;
 
- 	           artist[currIndex - 1] = artistTemp;
-   	           song[currIndex - 1] = songTemp;
-     	           time[currIndex - 1] = timeTemp;
+                currIndex--;
+                }
 
-            	   currIndex--;
         }
+
     }
-}
+
+        vector<string> getS(){
+            return this->song;
+        }
+
+        vector<string> getA(){
+        return this->artist;
+        }
+
+        vector<double> getL(){
+        return this->length;
+        }
 
     private:
         HipHopPlaylist* playlistH;
-        EDMPlaylsit* playlsitE;
+        EDMPlaylist* playlistE;
         PopPlaylist* playlistP;
-        LoFiPlaylsit* playlistL;
+        LoFiPlaylist* playlistL;
         RnBPlaylist* playlistR;
         NaturalPlaylist* playlistN;
+        vector<double> length;
+        vector<string> artist;
+        vector<string> song;
 };
 #endif //_ARTIST_ALPHABETICAL_HPP_ 
 
