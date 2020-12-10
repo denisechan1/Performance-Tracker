@@ -29,11 +29,6 @@
 >The strategy pattern we are implementing allows us to sort and display my playlists in three different ways: alphabetically by song title, alphabetically by artist and lastly, by song length. 
 
 
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  ## Screenshots
 >Input of the guide access:
 <img width="470" alt="Screen Shot 2020-12-09 at 5 46 42 PM" src="https://user-images.githubusercontent.com/57569111/101710634-bbee2400-3a46-11eb-8673-089399f979b8.png">
