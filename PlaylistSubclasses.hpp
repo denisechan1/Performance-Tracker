@@ -16,6 +16,7 @@ class HipHopPlaylist : public Playlist {
         vector<double> times{};
 
     public:
+        HipHopPlaylist() {};
         HipHopPlaylist(string name){
 	    this->title = name;
 	    songs = {"On Me", "Tyler Herro", "Drankin N Smokin", "Whoopty", "Errbody", "Moonwalking in Calabasas", "Hello", "Runnin", "Onna Come Up", "Practice", "The Parables", "That's It", "Losses", "Handgun", "Grey Area", "Body"};
@@ -49,6 +50,7 @@ class EDMPlaylist : public Playlist {
         vector<double> times{};
 
     public:
+        EDMPlaylist() {};
         EDMPlaylist(string name){
 	    this->title = name;
 	    songs = {"Just For A Moment", "Moments", "Lose Somebody", "Bye Bye", "Otherside", "Take Me", "Over Getting Over You", "Superstar", "In Flames", "All I Got", "Hesitate", "Better With You", "Always", "Alone", "Let You Down"};
@@ -81,6 +83,7 @@ class PopPlaylist : public Playlist {
 	vector<string> artists{};
 	vector<double> times{};
     public:
+        PopPlaylist() {};
         PopPlaylist(string name){
 	    this->title = name;
 	    songs = {"Positions", "Levitating", "Therefore I Am", "Monster", "Prisoner", "Blinding Lights", "Mood", "34+35", "Lonely", "You Broke Me First", "Paradise", "Take You Dancing", "Angels Like You", "Holy", "The Business"};
@@ -115,6 +118,7 @@ class LoFiPlaylist : public Playlist {
 
 
     public:
+        LoFiPlaylist() {};
         LoFiPlaylist(string name){
 	    this->title = name;
 	    songs = {"Gasteria", "Stripe Two", "Crooked Elements", "Top Floor", "Fly Away", "Seek Tone", "Hazy Days", "A Promise", "Reassuring Drops", "H2", "Bleepy Booper", "Toro", "Alleviate", "City Life", "Alien Signals" };
@@ -150,6 +154,7 @@ class RnBPlaylist : public Playlist {
 
 
     public:
+        RnBPlaylist() {};
         RnBPlaylist(string name) {
 	    this->title = name;
 	    songs = {"Not Another Love Song", "Damage", "Hit Different", "Wake Up Love", "Pick Up Your Feelings", "Sending My Love", "Outta Time", "Your Turn", "PERSIAN RUGS", "Rain", "Bad Habits", "Borderline", "All About You", "U 2 Luv", "Lost One"};
@@ -184,6 +189,7 @@ class NaturalPlaylist : public Playlist {
 
 
     public:
+        NaturalPlaylist() {};
         NaturalPlaylist(string name){
 	    this->title = name;
 	    songs = {"Suburban Forest Rain 1", "Birds in Forest Rainfall", "Quiet Rain in River", "Power and Meditation", "Forest Rain", "Empowering Rain", "Birds by the River", "Small Forest River", "Dripping Wet Leaves and Thunder", "Atlanta Rain", "Rain in the Woods", "Bustling River Sounds", "Chill Waves & Wind in Leaves", "Bird Showers", "Smoothe Suburban Forest Rain 2"};
