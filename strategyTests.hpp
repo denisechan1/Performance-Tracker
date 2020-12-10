@@ -248,70 +248,70 @@ TEST(time, HHlengthTest){
     EXPECT_EQ(result, 2.030000);  
 }
 
-// TEST(time, EsongTest){
-//      string x = "playlist";
-//      EDMPlaylist* test = new EDMPlaylist(x);
+ TEST(time, EsongTest){
+      string x = "playlist";
+      EDMPlaylist* test = new EDMPlaylist(x);
 
-//      songLength* test1 = new songLength(test);
-//      test1->selectionSort();
-//      vector<string> v = test1->getS();
-//      string result = v.at(0);
+      songLength* test1 = new songLength(test);
+      test1->selectionSort();
+      vector<string> v = test1->getS();
+      string result = v.at(0);
 
-//     EXPECT_EQ(result, "Hesitate");  
-// }
-// TEST(time, EartistTest){
-//      string x = "playlist";
-//      EDMPlaylist* test = new EDMPlaylist(x);
+     EXPECT_EQ(result, "Hesitate");  
+ }
+ TEST(time, EartistTest){
+      string x = "playlist";
+      EDMPlaylist* test = new EDMPlaylist(x);
 
-//      songLength* test1 = new songLength(test);
-//      test1->selectionSort();
-//      vector<string> v = test1->getA();
-//      string result = v.at(0);
+      songLength* test1 = new songLength(test);
+      test1->selectionSort();
+      vector<string> v = test1->getA();
+      string result = v.at(0);
 
-//     EXPECT_EQ(result, "The Spacies, ToWonder");  
-// }
-// TEST(time, ElengthTest){
-//      string x = "playlist";
-//      EDMPlaylist* test = new EDMPlaylist(x);
+     EXPECT_EQ(result, "The Spacies, ToWonder");  
+ }
+ TEST(time, ElengthTest){
+      string x = "playlist";
+      EDMPlaylist* test = new EDMPlaylist(x);
 
-//      songLength* test1 = new songLength(test);
-//      test1->selectionSort();
-//      vector<double> v = test1->getL();
-//      double result = v.at(0);
+      songLength* test1 = new songLength(test);
+      test1->selectionSort();
+      vector<double> v = test1->getL();
+      double result = v.at(0);
 
-//     EXPECT_EQ(result, 3.090000);  
-// }
+     EXPECT_EQ(result, 3.090000);  
+ }
 
-// TEST(time, PsongTest){
-//      string x = "playlist";
-//      EDMPlaylist* test = new EDMPlaylist(x);
+ TEST(time, PsongTest){
+      string x = "playlist";
+      EDMPlaylist* test = new EDMPlaylist(x);
 
-//      songLength* test1 = new songLength(test);
-//      test1->selectionSort();
-//      vector<string> v = test1->getS();
-//      string result = v.at(0);
+      songLength* test1 = new songLength(test);
+      test1->selectionSort();
+      vector<string> v = test1->getS();
+      string result = v.at(0);
 
-//     EXPECT_EQ(result, "Mood");  
-// }
+     EXPECT_EQ(result, "Mood");  
+ }
 // TEST(time, PartistTest){
 //      string x = "playlist";
 //      EDMPlaylist* test = new EDMPlaylist(x);
 
-//      songLength* test1 = new songLength(test);
-//      test1->selectionSort();
-//      vector<string> v = test1->getA();
-//      string result = v.at(0);
+  //    songLength* test1 = new songLength(test);
+    //  test1->selectionSort();
+      //vector<string> v = test1->getA();
+      //string result = v.at(0);
 
-//     EXPECT_EQ(result, "24kGoldn, Iann Dior");  
+     //EXPECT_EQ(result, "24kGoldn, Iann Dior");  
 // }
-// TEST(time, PlengthTest){
+//TEST(time, PlengthTest){
 //      string x = "playlist";
 //      EDMPlaylist* test = new EDMPlaylist(x);
 
-//      songLength* test1 = new songLength(test);
-//      test1->selectionSort();
-//      vector<double> v = test1->getL();
-//      double result = v.at(0);
+  //    songLength* test1 = new songLength(test);
+    //  test1->selectionSort();
+      //vector<double> v = test1->getL();
+    //  double result = v.at(0);
 
 //     EXPECT_EQ(result, 2.210000);  
 // }
