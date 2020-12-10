@@ -32,11 +32,13 @@ int main() {
   while (control2) {
     printMenu2();
     cin >> input2;
+    cout << "\n\n" << endl;
     if (input2 == 'h'){
       ConcreteFactory* choice = new ConcreteFactory();
       string pname;
       cout << "Enter a name for the Hip Hop playlist: " << endl;
       cin >> pname;
+      cout << "\n\n" << endl;
       HipHopPlaylist* user = choice->CreateHipHopPlaylist(pname);
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
@@ -48,6 +50,7 @@ int main() {
       string pname;
       cout << "Enter a name for the EDM playlist: " << endl;
       cin >> pname;
+      cout << "\n\n" << endl;
       EDMPlaylist* user = choice->CreateEDMPlaylist(pname);
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
@@ -59,6 +62,7 @@ int main() {
       string pname;
       cout << "Enter a name for the Pop playlist: " << endl;
       cin >> pname;
+      cout << "\n\n" << endl;
       PopPlaylist* user = choice->CreatePopPlaylist(pname);
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
@@ -70,6 +74,7 @@ int main() {
       string pname;
       cout << "Enter a name for the Lo-Fi playlist: " << endl;
       cin >> pname;
+      cout << "\n\n" << endl;
       LoFiPlaylist* user = choice->CreateLoFiPlaylist(pname);
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
@@ -81,6 +86,7 @@ int main() {
       string pname;
       cout << "Enter a name for the RnB playlist: " << endl;
       cin >> pname;
+      cout << "\n\n" << endl;
       RnBPlaylist* user = choice->CreateRnBPlaylist(pname);
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
@@ -92,6 +98,7 @@ int main() {
       string pname;
       cout << "Enter a name for the Nature Sounds playlist: " << endl;
       cin >> pname;
+      cout << "\n\n" << endl;
       NaturalPlaylist* user = choice->CreateNaturalPlaylist(pname);
       chosensongs = user->getSongs();
       chosenartists = user->getArtists();
@@ -100,6 +107,7 @@ int main() {
     }
     else {
       cout << "Not a valid input. Please try again." << endl;
+      cout << "\n\n" << endl;
     }
   }
 
@@ -111,6 +119,7 @@ int main() {
 }
 
 void printMenu2() {
+      cout << "\n\n\n" << endl;
       cout << "Choose a playlist to listen to: " << endl;
       cout << "Enter 'h' to listen to a Hip Hop playlist." << endl;
       cout << "Enter 'e' to listen to an EDM playlist." << endl;
