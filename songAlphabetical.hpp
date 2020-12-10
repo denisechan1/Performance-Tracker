@@ -66,7 +66,7 @@ class songAlphabetical : public Strategy{
                 if (song.at(currIndex - 1) > song.at(currIndex)) {
                     string songTemp = song.at(currIndex - 1);
                     string artistTemp = artist.at(currIndex - 1);
-                    int timeTemp = length.at(currIndex - 1);
+                    double timeTemp = length.at(currIndex - 1);
 
                     song.at(currIndex - 1) = song.at(currIndex);
                     artist.at(currIndex - 1) = artist.at(currIndex);
