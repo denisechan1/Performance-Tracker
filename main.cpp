@@ -28,6 +28,7 @@ int main() {
 	
   //abstract factory pattern
   int control2 = 1;
+  int control3 = 1;
   char input2;
   char input3;
   string pname;
@@ -50,29 +51,31 @@ int main() {
       chosentimes = user->getTimes();
 
       //strategy pattern
-      printMenu3();
-      cin >> input3;
-      if (input3 == 's'){
-        songAlphabetical* final = new songAlphabetical(user);
-        final->bubbleSort();
-        final->display();
-
-        // for(unsigned int i = 0; i < final->getS().size(); i++){
-        //     cout << final->getS().at(i) << "    " << final->getA().at(i) << "    " << final->getL().at(i) << endl;
-        // }
-
+      while(control3){
+        printMenu3();
+        cin >> input3;
+        if (input3 == 's'){
+          songAlphabetical* final = new songAlphabetical(user);
+          final->bubbleSort();
+          final->display();
+          control3 = 0;
+        }
+        else if (input3 == 'a'){
+          artistAlphabetical* final = new artistAlphabetical(user);
+          final->insertionSort();
+          final->display();
+          control3 = 0;
+        }
+        else if (input3 == 't'){
+          songLength* final = new songLength(user);
+          final->selectionSort();
+          final->display();
+          control3 = 0;
+        }
+        else {
+          cout << "INVALID INPUT!" << endl;
+        }
       }
-      else if (input3 == 'a'){
-        artistAlphabetical* final = new artistAlphabetical(user);
-        final->insertionSort();
-        final->display();
-      }
-      else{
-        songLength* final = new songLength(user);
-        final->selectionSort();
-        final->display();
-      }
-
       control2 = 0;
     }
     else if (input2 == 'e'){
@@ -87,22 +90,30 @@ int main() {
       cout << "Playlist: " << pname << endl;
 
       //strategy pattern
-      printMenu3();
-      cin >> input3;
-      if (input3 == 's'){
-        songAlphabetical* final = new songAlphabetical(user);
-        final->bubbleSort();
-        final->display();
-      }
-      else if (input3 == 'a'){
-        artistAlphabetical* final = new artistAlphabetical(user);
-        final->insertionSort();
-        final->display();
-      }
-      else{
-        songLength* final = new songLength(user);
-        final->selectionSort();
-        final->display();
+      while(control3){
+        printMenu3();
+        cin >> input3;
+        if (input3 == 's'){
+          songAlphabetical* final = new songAlphabetical(user);
+          final->bubbleSort();
+          final->display();
+          control3 = 0;
+        }
+        else if (input3 == 'a'){
+          artistAlphabetical* final = new artistAlphabetical(user);
+          final->insertionSort();
+          final->display();
+          control3 = 0;
+        }
+        else if (input3 == 't'){
+          songLength* final = new songLength(user);
+          final->selectionSort();
+          final->display();
+          control3 = 0;
+        }
+        else {
+          cout << "INVALID INPUT!" << endl;
+        }
       }
 
       control2 = 0; 
@@ -118,23 +129,31 @@ int main() {
       chosentimes = user->getTimes();
 
       //strategy pattern
+    while(control3){
       printMenu3();
       cin >> input3;
       if (input3 == 's'){
         songAlphabetical* final = new songAlphabetical(user);
         final->bubbleSort();
         final->display();
+        control3 = 0;
       }
       else if (input3 == 'a'){
         artistAlphabetical* final = new artistAlphabetical(user);
         final->insertionSort();
         final->display();
+        control3 = 0;
       }
-      else{
+      else if (input3 == 't'){
         songLength* final = new songLength(user);
         final->selectionSort();
         final->display();
+        control3 = 0;
       }
+      else{
+        cout << "INVALID INPUT!" << endl;
+      }
+    }
 
       control2 = 0; 
     }
@@ -149,24 +168,31 @@ int main() {
       chosentimes = user->getTimes();
 
       //strategy pattern
+    while(control3){
       printMenu3();
       cin >> input3;
       if (input3 == 's'){
         songAlphabetical* final = new songAlphabetical(user);
         final->bubbleSort();
         final->display();
+        control3 = 0;
       }
       else if (input3 == 'a'){
         artistAlphabetical* final = new artistAlphabetical(user);
         final->insertionSort();
         final->display();
+        control3 = 0;
       }
-      else{
+      else if (input3 == 't'){
         songLength* final = new songLength(user);
         final->selectionSort();
         final->display();
+        control3 = 0;
       }
-
+      else {
+        cout << "INVALID INPUT!" << endl;
+      }
+    }
       control2 = 0; 
     }
     else if (input2 == 'r'){
@@ -180,24 +206,31 @@ int main() {
       chosentimes = user->getTimes();
 
       //strategy pattern
+    while(control3){
       printMenu3();
       cin >> input3;
       if (input3 == 's'){
         songAlphabetical* final = new songAlphabetical(user);
         final->bubbleSort();
         final->display();
+        control3 = 0;
       }
       else if (input3 == 'a'){
         artistAlphabetical* final = new artistAlphabetical(user);
         final->insertionSort();
         final->display();
+        control3 = 0;
       }
-      else{
+      else if (input3 == 't'){
         songLength* final = new songLength(user);
         final->selectionSort();
         final->display();
+        control3 = 0;
       }
-
+      else{
+        cout << "INVALID INPUT!" << endl;
+      }
+    }
       control2 = 0; 
     }
     else if (input2 == 'n'){
@@ -211,24 +244,31 @@ int main() {
       chosentimes = user->getTimes();
 
       //strategy pattern
+    while(control3){
       printMenu3();
       cin >> input3;
       if (input3 == 's'){
         songAlphabetical* final = new songAlphabetical(user);
         final->bubbleSort();
         final->display();
+        control3 = 0;
       }
       else if (input3 == 'a'){
         artistAlphabetical* final = new artistAlphabetical(user);
         final->insertionSort();
-        //final->display();
+        final->display();
+        control3 = 0;
       }
-      else{
+      else if (input3 == 't'){
         songLength* final = new songLength(user);
         final->selectionSort();
         final->display();
+        control3 = 0;
       }
-
+      else{
+        cout << "INVALID INPUT!" << endl;
+      }
+    }
       control2 = 0; 
     }
     else if (input2 == 'q'){
