@@ -313,8 +313,76 @@ TEST(time, HHlengthTest){
       //vector<double> v = test1->getL();
     //  double result = v.at(0);
 
-    // EXPECT_EQ(result, 2.210000);  
-//}
-    
+//     EXPECT_EQ(result, 2.210000);  
+// }
+
+TEST(song, HHsongTest){
+     string x = "playlist";
+     HipHopPlaylist* test = new HipHopPlaylist(x);
+
+     songAlphabetical* test1 = new songAlphabetical(test);
+     test1->bubbleSort();
+     vector<string> v = test1->getS();
+     string result = v.at(0);
+
+    EXPECT_EQ(result, "Body");  
+}
+TEST(song, HHartistTest){
+     string x = "playlist";
+     HipHopPlaylist* test = new HipHopPlaylist(x);
+
+     songAlphabetical* test1 = new songAlphabetical(test);
+     test1->bubbleSort();
+     vector<string> v = test1->getA();
+     string result = v.at(0);
+
+    EXPECT_EQ(result, "Megan Thee Stallion");  
+}
+TEST(song, HHlengthTest){
+     string x = "playlist";
+     HipHopPlaylist* test = new HipHopPlaylist(x);
+
+     songAlphabetical* test1 = new songAlphabetical(test);
+     test1->bubbleSort();
+     vector<double> v = test1->getL();
+     double result = v.at(0);
+
+    EXPECT_EQ(result, 2.510000);  
+}
+
+TEST(song, EsongTest){
+     string x = "playlist";
+     EDMPlaylist* test = new EDMPlaylist(x);
+
+     songAlphabetical* test1 = new songAlphabetical(test);
+     test1->bubbleSort();
+     vector<string> v = test1->getS();
+     string result = v.at(0);
+
+    EXPECT_EQ(result, "All I Got");  
+}
+TEST(song, EartistTest){
+     string x = "playlist";
+     EDMPlaylist* test = new EDMPlaylist(x);
+
+     songAlphabetical* test1 = new songAlphabetical(test);
+     test1->bubbleSort();
+     vector<string> v = test1->getA();
+     string result = v.at(0);
+
+    EXPECT_EQ(result, "Said the Sky, Kwesi");  
+}
+TEST(song, ElengthTest){
+     string x = "playlist";
+     EDMPlaylist* test = new EDMPlaylist(x);
+
+     songAlphabetical* test1 = new songAlphabetical(test);
+     test1->bubbleSort();
+     vector<double> v = test1->getL();
+     double result = v.at(0);
+
+    EXPECT_EQ(result, 5.160000);  
+}
+
 
 #endif //__STRATEGY_TESTS_HPP

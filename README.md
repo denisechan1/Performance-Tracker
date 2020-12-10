@@ -29,11 +29,6 @@
 >The strategy pattern we are implementing allows us to sort and display my playlists in three different ways: alphabetically by song title, alphabetically by artist and lastly, by song length. 
 
 
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  ## Screenshots
 >Input of the guide access:
 <img width="470" alt="Screen Shot 2020-12-09 at 5 46 42 PM" src="https://user-images.githubusercontent.com/57569111/101710634-bbee2400-3a46-11eb-8673-089399f979b8.png">
@@ -44,7 +39,15 @@
 >Input of the playlist selection menu:
 <img width="717" alt="Screen Shot 2020-12-09 at 8 05 01 PM" src="https://user-images.githubusercontent.com/72418204/101720287-0af18480-3a5a-11eb-9a52-998658d10c3c.png">
 
->Output of the playlist selection menu (the playlist): 
+>Output of the playlist selection menu (the playlist in song name alphabetical order): 
+<img width="1094" alt="Screen Shot 2020-12-10 at 10 05 06 AM" src="https://user-images.githubusercontent.com/72418204/101815812-f9998e00-3ad4-11eb-9441-6c31d7869e2e.png">
+
+>Output of the playlist selection menu (the playlist in artist name alphabetical order): 
+<img width="1029" alt="Screen Shot 2020-12-10 at 10 43 21 AM" src="https://user-images.githubusercontent.com/72418204/101815826-fef6d880-3ad4-11eb-9aee-387744d4eaea.png">
+
+>Output of the playlist selection menu (the playlist in song length in ascending order): 
+<img width="1078" alt="Screen Shot 2020-12-10 at 10 45 50 AM" src="https://user-images.githubusercontent.com/72418204/101815827-ff8f6f00-3ad4-11eb-8c87-ed46d2012563.png">
+
  
 ## Installation/Usage
  > 1. Go to the green button at the top of the repository labeled "Code" and copy the "HTTPS" link onto your clipboard

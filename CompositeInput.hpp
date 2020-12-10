@@ -120,20 +120,20 @@ void PrintTop() {
 void CompositeInput() {
   cout << "\n\n\n\n\n";
   int control = 1;
-    int input;
+    string input;
     while (control) {
       printMenu();
       cin >> input;
-      if (input == 1) {
+      if (input == "1") {
         EnterNewGuide();
       }
-      else if (input == 2) {
+      else if (input == "2") {
         AddToGuide();
       }
-      else if (input == 3) {
+      else if (input == "3") {
         PrintTop();
       }
-      else if (input == 0) {
+      else if (input == "0") {
         cout << "Thank you!\n\n" << endl;
         control = 0;
       }
