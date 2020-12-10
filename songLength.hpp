@@ -82,9 +82,6 @@ class songLength : public Strategy{
                                         song.at(min) = songTemp;
 				}
 			}
-			for(unsigned int i = 0; i < song.size(); i++){
-                                cout << song.at(i) << "    " << artist.at(i) << "    " << length.at(i) << endl;
-                        }
 
 		}
 
