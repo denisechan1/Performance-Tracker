@@ -42,9 +42,16 @@
 <img width="489" alt="Screen Shot 2020-12-09 at 5 46 57 PM" src="https://user-images.githubusercontent.com/57569111/101710765-01125600-3a47-11eb-813a-68631b4e4a5e.png">
 
  
- ## Installation/Usage
- > Instructions on installing and running your application
+## Installation/Usage
+ > 1. Go to the green button at the top of the repository labeled "Code" and copy the "HTTPS" link onto your clipboard
+ > 2. Open your terminal, and enter the following command: git clone <GitHub link>
+ > 3. Enter the following command: git submodule update --init --recursive
+ > 4. Enter the following command: cmake .
+ > 5. Enter the following command: make
+ > 6. Enter the following command: ./main
+ > 7. The menu will output with a list of options. Follow the instructions to navigate through the program (add task, select playlist, etc.).
+ 
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- >Testing was done using Google Test.
+ > Testing was done using Google Test. Our project was tested and validated with the unit tests we created. Each one of us created a number of tests for the design pattern that we are in charge of. In these tests, we ensure that our functions do what we expect them to do. These tests are located in the "FactoryTest.hpp" and "compositeTest.hpp" files, and can be run with the ./test executable.  
+
  
