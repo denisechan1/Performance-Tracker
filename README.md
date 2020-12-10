@@ -35,8 +35,7 @@
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  ## Screenshots
- > Screenshots of the input/output after running your application
-  >Input of the guide access:
+ >Input of the guide access:
  <img width="470" alt="Screen Shot 2020-12-09 at 5 46 42 PM" src="https://user-images.githubusercontent.com/57569111/101710634-bbee2400-3a46-11eb-8673-089399f979b8.png">
  >Output of the guide user wants to print:
 <img width="489" alt="Screen Shot 2020-12-09 at 5 46 57 PM" src="https://user-images.githubusercontent.com/57569111/101710765-01125600-3a47-11eb-813a-68631b4e4a5e.png">
