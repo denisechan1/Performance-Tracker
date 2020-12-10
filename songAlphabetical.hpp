@@ -88,15 +88,15 @@ class songAlphabetical : public Strategy{
     }
 
     vector<string> getS(){
-        return this->song;
+        return song;
     }
 
     vector<string>getA(){
-        return this->artist;
+        return artist;
     }
 
     vector<double>getL(){
-        return this->length;
+        return length;
     }
  
     private:
