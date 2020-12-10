@@ -384,16 +384,5 @@ TEST(song, ElengthTest){
     EXPECT_EQ(result, 5.160000);  
 }
 
-TEST(song, PsongTest){
-     string x = "playlist";
-     PopPlaylist* test = new PopPlaylist(x);
-
-     songAlphabetical* test1 = new songAlphabetical(test);
-     test1->bubbleSort();
-     vector<string> v = test1->getS();
-     string result = v.at(0);
-
-    EXPECT_EQ(result, "34+35");  
-}
 
 #endif //__STRATEGY_TESTS_HPP
