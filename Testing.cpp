@@ -2,6 +2,7 @@
 
 #include "FactoryTests.hpp"
 #include "compositeTest.hpp"
+#include "strategyTests.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

@@ -37,12 +37,12 @@ public:
     //   }
     // }
     AbstractFactory() {};
-    virtual HipHopPlaylist* CreateHipHopPlaylist(string name) const = 0;
-    virtual EDMPlaylist* CreateEDMPlaylist(string name) const = 0;
-    virtual PopPlaylist* CreatePopPlaylist(string name) const = 0;
-    virtual LoFiPlaylist* CreateLoFiPlaylist(string name) const = 0;
-    virtual RnBPlaylist* CreateRnBPlaylist(string name) const = 0;
-    virtual NaturalPlaylist* CreateNaturalPlaylist(string name) const = 0;
+    virtual HipHopPlaylist* CreateHipHopPlaylist(string name)  = 0;
+    virtual EDMPlaylist* CreateEDMPlaylist(string name) = 0;
+    virtual PopPlaylist* CreatePopPlaylist(string name) = 0;
+    virtual LoFiPlaylist* CreateLoFiPlaylist(string name) = 0;
+    virtual RnBPlaylist* CreateRnBPlaylist(string name) = 0;
+    virtual NaturalPlaylist* CreateNaturalPlaylist(string name) = 0;
 };
 
 #endif //_ABSTRACTFACTORY_HPP_
