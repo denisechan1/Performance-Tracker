@@ -15,6 +15,11 @@ class Playlist {
         virtual vector<string> getArtists() = 0;
         virtual vector<double> getTimes() = 0;
 
+    private:
+	string title;
+	vector<string> *song;
+	vector<string> *artist;
+	vector<double> *time;
 };
 
 #endif //_ABSTRACTPLAYLIST_HPP_ 

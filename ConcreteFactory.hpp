@@ -12,32 +12,32 @@ class ConcreteFactory : public AbstractFactory {
     public:
         ConcreteFactory() : AbstractFactory() {};
 
-        HipHopPlaylist* CreateHipHopPlaylist(string name) const{
+        HipHopPlaylist* CreateHipHopPlaylist(string name){
             HipHopPlaylist* creation = new HipHopPlaylist(name); 
             return creation; 
         }
 
-        EDMPlaylist* CreateEDMPlaylist(string name) const{
+        EDMPlaylist* CreateEDMPlaylist(string name){
             EDMPlaylist* creation = new EDMPlaylist(name); 
             return creation; 
         }
 
-        PopPlaylist* CreatePopPlaylist(string name) const{
+        PopPlaylist* CreatePopPlaylist(string name){
             PopPlaylist* creation = new PopPlaylist(name); 
             return creation; 
         }
 
-        LoFiPlaylist* CreateLoFiPlaylist(string name) const{
+        LoFiPlaylist* CreateLoFiPlaylist(string name){
             LoFiPlaylist* creation = new LoFiPlaylist(name); 
             return creation; 
         }
 
-        RnBPlaylist* CreateRnBPlaylist(string name) const{
+        RnBPlaylist* CreateRnBPlaylist(string name){
             RnBPlaylist* creation = new RnBPlaylist(name); 
             return creation; 
         }
 
-        NaturalPlaylist* CreateNaturalPlaylist(string name) const{
+        NaturalPlaylist* CreateNaturalPlaylist(string name){
             NaturalPlaylist* creation = new NaturalPlaylist(name); 
             return creation; 
         }
