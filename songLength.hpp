@@ -18,9 +18,9 @@ class songLength : public Strategy{
 
         songLength(EDMPlaylist* playlist){
             playlistE = playlist;
-            length = playlistH->getTimes();
-            artist = playlistH->getArtists();
-            song = playlistH->getSongs();
+            length = playlistE->getTimes();
+            artist = playlistE->getArtists();
+            song = playlistE->getSongs();
         }
 
         songLength(PopPlaylist* playlist){
@@ -51,41 +51,42 @@ class songLength : public Strategy{
     	    song = playlistN->getSongs();
         }
 
-		void display(){			
-			for(unsigned int i = 0; i < song.size(); i++){
-				cout << song.at(i) << "    " << artist.at(i) << "    " << length.at(i) << endl;
-			}
+	void display(){			
+		for(unsigned int i = 0; i < song.size(); i++){
+			cout << song.at(i) << "    " << artist.at(i) << "    " << length.at(i) << endl;
 		}
+	}
 	
-		void selectionSort(){
-			for (int i = 0; i < length.size() - 1; ++i) {
-				int min = i;
-				for (int j = i+1; j < length.size(); ++j) {
-					if (length.at(min) > length.at(j)) {
-						min = j;
-					}
+	void selectionSort(){
+		for (int i = 0; i < length.size() - 1; ++i) {
+			int min = i;
+			for (int j = i+1; j < length.size(); ++j) {
+				if (length.at(min) > length.at(j)) {
+					min = j;
 				}
-				if (min != i){
+			}
+			if (min != i){
 					//swap(length.at(j), length.at(min));
-					double lengthTemp = length.at(i);
-            				length.at(i) =  length.at(min);
-            				length.at(min) = lengthTemp;
+				double lengthTemp = length.at(i);
+            			length.at(i) =  length.at(min);
+            			length.at(min) = lengthTemp;
 
 					//swap(artist.at(j), artist.at(min));
-					string artistTemp = artist.at(i);
-                                        artist.at(i) = artist.at(min);
-                                        artist.at(min) = artistTemp;
+				string artistTemp = artist.at(i);
+                                artist.at(i) = artist.at(min);
+                                artist.at(min) = artistTemp;
+
 
 					//swap(song.at(j), song.at(min));
-					string songTemp = song.at(i);
-                                        song.at(i) =  song.at(min);
-                                        song.at(min) = songTemp;
-				}
+				string songTemp = song.at(i);
+                                song.at(i) =  song.at(min);
+                                song.at(min) = songTemp;
 			}
-
 		}
 
-		vector<string> getS(){
+	}
+
+	vector<string> getS(){
             return song;
         }
 
@@ -111,4 +112,4 @@ class songLength : public Strategy{
 };
 #endif //_SONG_LENGTH_HPP_
 	
-		
+	   	
