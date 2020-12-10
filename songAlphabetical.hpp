@@ -10,44 +10,44 @@ class songAlphabetical : public Strategy{
         songAlphabetical() {} ;
         songAlphabetical(HipHopPlaylist* playlist){
             playlistH = playlist;
-            vector<double> length = playlistH->getTimes();
-    	    vector<string> artist = playlistH->getArtists();
-    	    vector<string> song = playlistH->getSongs();
+            length = playlistH->getTimes();
+    	    artist = playlistH->getArtists();
+    	    song = playlistH->getSongs();
         }
 
         songAlphabetical(EDMPlaylist* playlist){
             playlistE = playlist;
-            vector<double> length = playlistE->getTimes();
-    	    vector<string> artist = playlistE->getArtists();
-    	    vector<string> song = playlistE->getSongs();
+            length = playlistE->getTimes();
+    	    artist = playlistE->getArtists();
+    	    song = playlistE->getSongs();
         }
 
         songAlphabetical(PopPlaylist* playlist){
             playlistP = playlist;
-            vector<double> length = playlistP->getTimes();
+            length = playlistP->getTimes();
     	    vector<string> artist = playlistP->getArtists();
     	    vector<string> song = playlistP->getSongs();
         }
 
         songAlphabetical(LoFiPlaylist* playlist){
             playlistL = playlist;
-            vector<double> length = playlistL->getTimes();
-    	    vector<string> artist = playlistL->getArtists();
-    	    vector<string> song = playlistL->getSongs();
+            length = playlistL->getTimes();
+    	    artist = playlistL->getArtists();
+    	    song = playlistL->getSongs();
         }
 
         songAlphabetical(RnBPlaylist* playlist){
             playlistR = playlist;
-            vector<double> length = playlistR->getTimes();
-    	    vector<string> artist = playlistR->getArtists();
-    	    vector<string> song = playlistR->getSongs();
+            length = playlistR->getTimes();
+    	    artist = playlistR->getArtists();
+    	    song = playlistR->getSongs();
         }
 
         songAlphabetical(NaturalPlaylist* playlist){
             playlistN = playlist;
-            vector<double> length = playlistN->getTimes();
-    	    vector<string> artist = playlistN->getArtists();
-    	    vector<string> song = playlistN->getSongs();
+            length = playlistN->getTimes();
+    	    artist = playlistN->getArtists();
+    	    song = playlistN->getSongs();
         }
 
     void display(){			

@@ -1,53 +1,54 @@
 #ifndef _SONG_LENGTH_HPP
 #define _SONG_LENGTH_HPP
 #include "strategy.hpp"
+#include "PlaylistSubclasses.hpp"
 
 #include <iostream>
 #include <vector>
 
 class songLength : public Strategy{
     public:
-	 songLength() {} ;
+	songLength() {};
         songLength(HipHopPlaylist* playlist){
             playlistH = playlist;
-            vector<double> length = playlistH->getTimes();
-    	    vector<string> artist = playlistH->getArtists();
-    	    vector<string> song = playlistH->getSongs();
+            length = playlistH->getTimes();
+    	    artist = playlistH->getArtists();
+    	    song = playlistH->getSongs();
         }
 
         songLength(EDMPlaylist* playlist){
             playlistE = playlist;
-            vector<double> length = playlistE->getTimes();
-    	    vector<string> artist = playlistE->getArtists();
-    	    vector<string> song = playlistE->getSongs();
+            length = playlistH->getTimes();
+            artist = playlistH->getArtists();
+            song = playlistH->getSongs();
         }
 
         songLength(PopPlaylist* playlist){
             playlistP = playlist;
-            vector<double> length = playlistP->getTimes();
-    	    vector<string> artist = playlistP->getArtists();
-    	    vector<string> song = playlistP->getSongs();
+            length = playlistP->getTimes();
+    	    artist = playlistP->getArtists();
+    	    song = playlistP->getSongs();
         }
 
         songLength(LoFiPlaylist* playlist){
             playlistL = playlist;
-            vector<double> length = playlistL->getTimes();
-    	    vector<string> artist = playlistL->getArtists();
-    	    vector<string> song = playlistL->getSongs();
+            length = playlistL->getTimes();
+    	    artist = playlistL->getArtists();
+    	    song = playlistL->getSongs();
         }
 
         songLength(RnBPlaylist* playlist){
             playlistR = playlist;
-            vector<double> length = playlistR->getTimes();
-    	    vector<string> artist = playlistR->getArtists();
-    	    vector<string> song = playlistR->getSongs();
+            length = playlistR->getTimes();
+    	    artist = playlistR->getArtists();
+    	    song = playlistR->getSongs();
         }
 
         songLength(NaturalPlaylist* playlist){
             playlistN = playlist;
-            vector<double> length = playlistN->getTimes();
-    	    vector<string> artist = playlistN->getArtists();
-    	    vector<string> song = playlistN->getSongs();
+            length = playlistN->getTimes();
+    	    artist = playlistN->getArtists();
+    	    song = playlistN->getSongs();
         }
 
 		void display(){			
@@ -56,20 +57,34 @@ class songLength : public Strategy{
 			}
 		}
 	
-		void selectionSort(){  
-			for (int j = 0; j < length.size() - 1; ++j) {
-				int min = j;
-				for (int i = j+1; i < length.size(); ++i) {
-					if (length.at(min) > length.at(i)) {
-						min = i;
+		void selectionSort(){
+			for (int i = 0; i < length.size() - 1; ++i) {
+				int min = i;
+				for (int j = i+1; j < length.size(); ++j) {
+					if (length.at(min) > length.at(j)) {
+						min = j;
 					}
 				}
-				if (min != j){
-					swap(length.at(j), length.at(min));
-					swap(artist.at(j), artist.at(min));
-					swap(song.at(j), song.at(min));
+				if (min != i){
+					//swap(length.at(j), length.at(min));
+					int lengthTemp = length.at(i);
+            				length.at(i) =  length.at(min);
+            				length.at(min) = lengthTemp;
+
+					//swap(artist.at(j), artist.at(min));
+					string artistTemp = artist.at(i);
+                                        artist.at(i) = artist.at(min);
+                                        artist.at(min) = artistTemp;
+
+					//swap(song.at(j), song.at(min));
+					string songTemp = song.at(i);
+                                        song.at(i) =  song.at(min);
+                                        song.at(min) = songTemp;
 				}
 			}
+			for(unsigned int i = 0; i < song.size(); i++){
+                                cout << song.at(i) << "    " << artist.at(i) << "    " << length.at(i) << endl;
+                        }
 
 		}
 
