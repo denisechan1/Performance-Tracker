@@ -45,7 +45,7 @@ Category* AccessGuide() {
   int test = 1;
   int num;
   while (test) {
-      cout << "Enter the corresponding number of guide you want to access: " << endl;
+      cout << "Enter the corresponding number of guide you want to access: ";
       cin >> num;
       if (!(num < 1) || !(num >= top.size())) {
         test = 0;
