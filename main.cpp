@@ -105,6 +105,10 @@ int main() {
       chosentimes = user->getTimes();
       control2 = 0; 
     }
+    else if (input2 == 'q'){
+      cout << "Thank you!" << endl;
+      control2 = 0;
+    }
     else {
       cout << "Not a valid input. Please try again." << endl;
       cout << "\n\n" << endl;
@@ -127,4 +131,5 @@ void printMenu2() {
       cout << "Enter 'l' to listen to a Lo-Fi playlist." << endl;
       cout << "Enter 'r' to listen to an RnB playlist." << endl;
       cout << "Enter 'n' to listen to a Nature Sound playlist." << endl;
+      cout << "Enter 'q' to quit playlist menu." << endl;
 }
