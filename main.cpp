@@ -8,7 +8,7 @@
 #include "songLength.hpp"
 #include "songAlphabetical.hpp"
 #include "artistAlphabetical.hpp"
-
+#include "strategy.hpp"
 #include <vector>
 #include <string>
 
@@ -221,7 +221,7 @@ int main() {
       else if (input3 == 'a'){
         artistAlphabetical* final = new artistAlphabetical(user);
         final->insertionSort();
-        final->display();
+        //final->display();
       }
       else{
         songLength* final = new songLength(user);

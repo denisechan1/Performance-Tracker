@@ -56,38 +56,28 @@ class songAlphabetical : public Strategy{
         }
     }
 
-    void bubbleSort() {
-        int n = song.size();
+    void bubbleSort(){
+        int j, k;
+        for (int i = song.size(); i > 0; i--) {
+            for (j = 0, k = 1; k < i; j++, k++){
+               if (song.at(j) > song.at(k)) {
+                   string songTemp= song.at(j);
+                   double timeTemp= length.at(j);
+                   string artistTemp= artist.at(j);
 
-        while (n > 0) {
-            int lastIndex = 0;
+                   song.at(j) = song.at(k);
+                   length.at(j) = length.at(k);
+                   artist.at(j) = artist.at(k);
 
-            for (int currIndex = 1; currIndex < n; currIndex++){
-                if (song.at(currIndex - 1) > song.at(currIndex)) {
-                    string songTemp = song.at(currIndex - 1);
-                    string artistTemp = artist.at(currIndex - 1);
-                    int timeTemp = length.at(currIndex - 1);
-
-                    song.at(currIndex - 1) = song.at(currIndex);
-                    artist.at(currIndex - 1) = artist.at(currIndex);
-                    length.at(currIndex - 1) = length.at(currIndex);
-
-                    song.at(currIndex) = songTemp;
-                    artist.at(currIndex) = artistTemp;
-                    length.at(currIndex) = timeTemp;
-
-                    lastIndex = currIndex;
-                }
+                   song.at(k) = songTemp;
+                   length.at(k) = timeTemp;
+                   artist.at(k) = artistTemp;
+               }
             }
-            n = lastIndex;
         }
 
-        // for(unsigned int i = 0; i < song.size(); i++){
-        //     cout << song.at(i) << "    " << artist.at(i) << "    " << length.at(i) << endl;
-        // }
     }
-
-    vector<string> getS(){
+    vector<string>getS(){
         return this->song;
     }
 
