@@ -32,7 +32,7 @@ int main() {
   while (control2) {
     printMenu2();
     cin >> input2;
-    if (input2 == 'w'){
+    if (input2 == 'h'){
       ConcreteFactory* choice = new ConcreteFactory();
       string pname;
       cout << "Enter a name for the Hip Hop playlist: " << endl;
