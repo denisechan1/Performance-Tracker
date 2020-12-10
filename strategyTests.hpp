@@ -284,7 +284,7 @@ TEST(time, HHlengthTest){
 
  TEST(time, PsongTest){
       string x = "playlist";
-      EDMPlaylist* test = new EDMPlaylist(x);
+      PopPlaylist* test = new PopPlaylist(x);
 
       songLength* test1 = new songLength(test);
       test1->selectionSort();
@@ -293,28 +293,28 @@ TEST(time, HHlengthTest){
 
      EXPECT_EQ(result, "Mood");  
  }
-// TEST(time, PartistTest){
-//      string x = "playlist";
-//      EDMPlaylist* test = new EDMPlaylist(x);
+TEST(time, PartistTest){
+     string x = "playlist";
+     PopPlaylist* test = new PopPlaylist(x);
 
-  //    songLength* test1 = new songLength(test);
-    //  test1->selectionSort();
-      //vector<string> v = test1->getA();
-      //string result = v.at(0);
+     songLength* test1 = new songLength(test);
+     test1->selectionSort();
+      vector<string> v = test1->getA();
+      string result = v.at(0);
 
-     //EXPECT_EQ(result, "24kGoldn, Iann Dior");  
-// }
-//TEST(time, PlengthTest){
-//      string x = "playlist";
-//      EDMPlaylist* test = new EDMPlaylist(x);
+     EXPECT_EQ(result, "24kGoldn, Iann Dior");  
+}
+TEST(time, PlengthTest){
+     string x = "playlist";
+     PopPlaylist* test = new PopPlaylist(x);
 
-  //    songLength* test1 = new songLength(test);
-    //  test1->selectionSort();
-      //vector<double> v = test1->getL();
-    //  double result = v.at(0);
+     songLength* test1 = new songLength(test);
+     test1->selectionSort();
+      vector<double> v = test1->getL();
+     double result = v.at(0);
 
-//     EXPECT_EQ(result, 2.210000);  
-// }
+    EXPECT_EQ(result, 2.210000);  
+}
 
 TEST(song, HHsongTest){
      string x = "playlist";
@@ -383,6 +383,8 @@ TEST(song, ElengthTest){
 
     EXPECT_EQ(result, 5.160000);  
 }
+
+
 
 
 #endif //__STRATEGY_TESTS_HPP
