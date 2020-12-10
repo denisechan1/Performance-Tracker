@@ -25,7 +25,7 @@
 
 > The abstract factory class allows for me to create multiple concrete factories that create various different playlists. I only have one concrete class because I will be creating one subclass of empty playlists of various types. The types include Hip Hop, EDM, Pop, RnB, Lo-fi, and Nature sounds. The products of the abstract factory class are the actual playlists. As shown, the playlist class is an abstract class, and the individual playlists inherit from this. By doing so, I can add the different songs, artists, and durations of the songs under the correct playlist. 
 
-![strategypattern](https://user-images.githubusercontent.com/30084254/99359040-4934c300-2863-11eb-9cd3-f193aa322eb5.jpg)
+![strategyomt](https://user-images.githubusercontent.com/30084254/101832498-64a28f00-3aec-11eb-8e83-d923d69adad2.png)
 >The strategy pattern we are implementing allows us to sort and display my playlists in three different ways: alphabetically by song title, alphabetically by artist and lastly, by song length. 
 
 
