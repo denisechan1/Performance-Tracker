@@ -42,7 +42,7 @@
 <img width="489" alt="Screen Shot 2020-12-09 at 5 46 57 PM" src="https://user-images.githubusercontent.com/57569111/101710765-01125600-3a47-11eb-813a-68631b4e4a5e.png">
 
 >Input of the playlist selection menu:
-<img width="685" alt="Screen Shot 2020-12-09 at 7 55 52 PM" src="https://user-images.githubusercontent.com/72418204/101719799-e812a080-3a58-11eb-8827-a252ef9648ad.png">
+<img width="717" alt="Screen Shot 2020-12-09 at 8 05 01 PM" src="https://user-images.githubusercontent.com/72418204/101720287-0af18480-3a5a-11eb-9a52-998658d10c3c.png">
 
 >Output of the playlist selection menu (the playlist): 
  
