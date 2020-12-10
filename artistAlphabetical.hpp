@@ -79,6 +79,18 @@ class artistAlphabetical : public Strategy{
         }
     }
 
+    vector<string> getS(){
+        return song;
+    }
+
+    vector<string> getA(){
+        return artist;
+    }
+
+    vector<double> getL(){
+        return length;
+    }
+
     private:
         HipHopPlaylist* playlistH;
         EDMPlaylist* playlistE;
