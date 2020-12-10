@@ -67,7 +67,7 @@ class songLength : public Strategy{
 				}
 				if (min != i){
 					//swap(length.at(j), length.at(min));
-					int lengthTemp = length.at(i);
+					double lengthTemp = length.at(i);
             				length.at(i) =  length.at(min);
             				length.at(min) = lengthTemp;
 
